@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Shizuoka Software Developer - LiveReporter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Le styles -->
+    <script type="text/javascript" src="/js/acctag.js"></script>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">body { padding-top: 20px; padding-bottom: 60px; } /* Custom container */ .container { margin: 0 auto; max-width: 1000px; } .container &gt; hr { margin: 60px 0; } /* Main marketing message and sign up button */ .jumbotron { margin: 20px 0; text-align: left; } .jumbotron h1 { font-size: 100px; line-height: 1; } .jumbotron .lead { font-size: 24px; line-height: 1.25; } .jumbotron .btn { font-size: 21px; padding: 14px 24px; } /* Supporting marketing content */ .marketing { margin:
+    60px 0; } .marketing p + h4 { margin-top: 28px; } /* Customize the navbar links to be fill the entire space of the .navbar */ .navbar .navbar-inner { padding: 0; } .navbar .nav { margin: 0; display: table; width: 100%; } .navbar .nav li { display: table-cell; width: 1%; float: none; } .navbar .nav li a { font-weight: bold; text-align: center; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1); } .navbar .nav li:first-child a { border-left: 0; border-radius: 3px 0 0
+    3px; } .navbar .nav li:last-child a { border-right: 0; border-radius: 0 3px 3px 0; }</style>
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <h4 class="muted">Shizuoka Software Developer</h4>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li>
+                  <a href="/" style='font-size:10px;'>Home</a>
+                </li>
+                <li class="active">
+                  <a href="/software.html" style='font-size:10px;'>Software</a>
+                </li>
+                <li>
+                  <a href="/support.html" style='font-size:10px;'>Support</a>
+                </li>
+                <li>
+                  <a href="/contact.html" style='font-size:10px;'>Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /.navbar -->
+      </div>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <p class="lead">
+          LiveReporterについて
+        </p>
+        <p>
+          LiveReporterはiOS上からカメラ映像を伝送するアプリケーションです。
+        </p>
+        <p>
+          伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。
+        </p>
+        <p>
+          また、オープンソースもしくは有料の配信サーバーへ向け映像をプッシュ送信することができます。
+        </p>
+        <p>
+          本ページでは、基本的な使用方法の説明を記載しています。
+        </p>
+      </div>
+      <hr />
+        <h4>クライアントアプリを使った伝送</h4>
+        <p>
+          クライアントアプリは代表的なものとして<a href='http://www.videolan.org'>VideoLANプロジェクトのVLCプレーヤー</a>があります。
+        </p>
+        <div style='width:280px;height:120px;'>
+          <img src='img/FromVLCRequest.png' style='width:280px;' />
+        </div>
+        <p>
+          アプリ起動後、下記の画面が表示されます。画面下部に表示されたアドレスを確認してください。
+        </p>
+        <p>
+          デバイスに複数のIPアドレスが与えられている場合、表示されているアドレスをタップすることで、
+        </p>
+        <p>
+          他に与えられているアドレス情報を表示することができます。
+        </p>
+        <div style='width:280px;height:140px;'>
+          <img src='img/RequestAddressInMainView.png' style='width:280px;' />
+        </div>
+        <br />
+        <p>
+          PCもしくはスマートフォン側にてVLCプレイヤーを起動します。
+        </p>
+        <p>
+          「ファイル」->「ネットワークを開く」を選択します。
+        </p>
+        <div style='width:280;height:220px;'>
+          <img src='img/VLCNetworkMenu.png' style='width:240px;' />
+        </div>
+        <p>
+          「ソースを開く」のダイアログが表示されます。
+        </p>
+        <p>
+          「URL」の欄に先ほどアプリにて表示されたアドレスを入力し、「開く」ボタンを押します。
+        </p>
+        <div style='width:280;height:200px;'>
+          <img src='img/VLCNetworkDialog.png' style='width:280px;' />
+        </div>
+      <hr />
+        <h4>サーバーへのプッシュ伝送</h4>
+        <p>
+          本アプリが対応するプッシュ伝送できる配信サーバーは、
+        </p>
+        <p>
+          <a href="http://dss.macosforge.org/">Apple製DarwinStreamingServer</a>、
+        </p>
+        <p>
+          <a href="http://www.wowza.com/">Wowza Media Server</a>
+        </p>
+        <p>
+          などがあげられます。
+        </p>
+        <div style='width:280;height:320px;'>
+          <img src='img/ToServerRequest.png' style='width:280px;' />
+        </div>
+        <p>
+          アプリ起動画面にて、上部に表示されたアドレス入力欄にサーバーアドレスを入力し、接続ボタンを押してください。
+        </p>
+        <div style='width:280;height:180px;'>
+          <img src='img/InputServerAddressInMainView.png' style='width:280px;' />
+        </div>
+        <p>
+          各サーバーの設定方法については、サポートページの方に説明をご参照ください。
+        </p>
+        <p>
+          <a href="/dss">DarwinStreamingServer6.0.3について</a>
+        </p>
+      <hr />
+      <div class="footer">
+        <p>&copy; Kazuki Yoshida 2015</p>
+      </div>
+    </div>
+  </body>
+</html>

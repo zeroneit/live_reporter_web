@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Shizuoka Software Developer - LiveReporter</title>
+    <title>Shizuoka Software Developer - Live-Reporter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -53,10 +53,65 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <p class="lead">
-          映像設定
+          ネットワーク設定
         </p>
       </div>
       <hr />
+      <p>
+        <a href='settings.html'>セッティング画面一覧に戻る</a>
+      </p>
+      <hr />
+      <p>ネットワーク機能に関するパラメータを</p>
+      <p>変更することができます。</p>
+      <div style='width:280px;height:160px;'>
+        <img src='img/networksetting.png' style='width:280px;' />
+      </div>
+      <hr />
+      <h4>待ち受けポート番号</h4>
+      <p>iOSへ、直接RTSPで接続する場合のポート番号になります。</p>
+      <p>設定可能な範囲は1-65535までとなります。</p>
+      <p>iOSのバージョン、システムにより設定できない場合があります。</p>
+      <hr />
+      <h4>認証</h4>
+      <p>iOSへ、直接RTSPで接続する場合の認証設定となります。</p>
+      <p>本ソフトウェアでは、ダイジェスト認証を使用しています。</p>
+      <hr />
+      <h4>配信サーバー認証</h4>
+      <p>配信サーバーへ接続するための認証情報を入力できます。</p>
+      <p>こちらで、認証情報を入力していない場合、</p>
+      <p>または、配信サーバー側と認証が合わない場合、</p>
+      <p>認証情報を要求するダイアログが</p>
+      <p>都度表示されるようになっています。</p>
+      <p>ダイアログにて認証情報を</p>
+      <p>入力した場合、こちらの値は上書きされます。</p>
+      <hr />
+      <h4>トランスポートタイプ</h4>
+      <p>配信サーバへ向けて送信するメディアパケットの</p>
+      <p>トランスポートタイプを変更します。</p>
+      <p>TCPはパケットロスの発生は再送機構により</p>
+      <p>映像の乱れは減りますが、映像は遅延して送られます。</p>
+      <p>UDPは再送機構がないため、TCPに比べ、</p>
+      <p>リアルタイムに映像を配信しますが、</p>
+      <p>パケットロスによる映像の乱れが発生しやすくなります。</p>
+      <p>またUDPでは、ルーター等の機器がネットワーク上に存在する場合、</p>
+      <p>複数のポート設定を行う必要が有あるか、</p>
+      <p>VPNなどの設定を行えるルーターを準備する必要が有ります。</P>
+      <hr />
+      <h4>パケットサイズ</h4>
+      <p>本ソフトウェアでは、</p>
+      <p>メディアパケットを複数に分割、もしくは結合して送信します。</p>
+      <p>ネットワーク上の特性により、サイズの制限がある場合に、</p>
+      <p>こちらのパラメータで調整することができます。</p>
+      <p>各パラメータにおける実際の数値は以下の通りとなります。</p>
+      <table border='1'>
+        <tr><td width='16'>小</td><td>512Byte</td></tr>
+        <tr><td>中</td><td>1024Byte</td></tr>
+        <tr><td>大</td><td>1472Byte</td></tr>
+      </table>
+      <hr />
+      <p>
+        <a href='settings.html'>セッティング画面一覧に戻る</a>
+      </p>
       <hr />
       <div class="footer">
         <p>&copy; Kazuki Yoshida 2015</p>

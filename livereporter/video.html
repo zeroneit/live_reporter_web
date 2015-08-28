@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Shizuoka Software Developer - LiveReporter</title>
+    <title>Shizuoka Software Developer - Live-Reporter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -53,10 +53,66 @@
       <!-- Jumbotron -->
       <div class="jumbotron">
         <p class="lead">
-          映像設定
+          映像設定画面
         </p>
       </div>
       <hr />
+      <p>
+        <a href='settings.html'>セッティング画面一覧に戻る</a>
+      </p>
+      <hr />
+      <p>映像設定画面では、</p>
+      <p>カメラでキャプチャーされる解像度、</p>
+      <p>フレームレート、</p>
+      <p>配信される映像の画質</p>
+      <p>を変更することができます。</p>
+      <div style='width:280px;height:160px;'>
+        <img src='img/videosetting.png' style='width:280px;' />
+      </div>
+      <hr />
+      <h4>カメラ解像度</h4>
+      <p>iOSデバイスでキャプチャされるカメラ解像度を変更します。</p>
+      <p>対応している解像度は下記の通りです。</p>
+      <p>192 x 144</p>
+      <p>352 x 288</p>
+      <p>640 x 480</p>
+      <p>1280 x 720</p>
+      <p>1920 x 1080</p>
+      <hr />
+      <h4>フレームレート</h4>
+      <p>キャプチャー時のフレームレートを変更します。</p>
+      <p>フレームレートを低くすると画質は向上しますが、</p>
+      <p>動画としての滑らかな表示ではなくなります。</p>
+      <p>対応しているフレームレートは下記の通りです。</p>
+      <p>5 fps</p>
+      <p>10 fps</p>
+      <p>15 fps</p>
+      <p>20 fps</p>
+      <p>30 fps</p>
+      <hr />
+      <h4>エンコード品質</h4>
+      <p>カメラからキャプチャー後、</p>
+      <p>エンコードされる映像の品質を変更できます。</p>
+      <p>帯域の狭いところでは、品質を低く、</p>
+      <p>帯域の広いところでは、高画質の映像を配信できます。</p>
+      <p>対応している品質は下記のとおりです。</p>
+      <p>低</p>
+      <p>中</p>
+      <p>高</p>
+      <hr />
+      <p>カメラ解像度、エンコードの品質を</p>
+      <p>変更すると画面上部に表示されている、ビットレート表示が変更されます。</p>
+      <p>カメラ解像度に対するエンコード品質とビットレートの対応は以下となります。</p>
+      <table border='1' style='font-size:8px;'>
+        <tr><th width='16'></th><th width='64'>194x144</th><th width='64'>352x288</th><th width='64'>640x480</th><th width='64'>1280x720</th><th width='64'>1920x1080</th></tr>
+        <tr><td>低</td><td>64kbps</td><td>128kbps</td><td>256kbps</td><td>768kbps</td><td>1Mbps</td></tr>
+        <tr><td>中</td><td>96kbps</td><td>256kbps</td><td>512kbps</td><td>1Mbps</td><td>2Mbps</td></tr>
+        <tr><td>高</td><td>256kbps</td><td>512kbps</td><td>1Mbps</td><td>2Mbps</td><td>4Mbps</td></tr>
+      </table>
+      <hr />
+      <p>
+        <a href='settings.html'>セッティング画面一覧に戻る</a>
+      </p>
       <hr />
       <div class="footer">
         <p>&copy; Kazuki Yoshida 2015</p>

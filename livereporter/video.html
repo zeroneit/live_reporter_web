@@ -29,12 +29,12 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
     <script type='text/javascript' src='scripts/jquery.js'></script>
     <script type='text/javascript' src='scripts/language_set.js'></script>
     <script type='text/javascript' src='scripts/video.js'></script>
     <script type='text/javascript' src='scripts/jquery-ui.min.js'></script>
     <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
-    <link rel="shortcut icon" href="ico/favicon.png" />
   </head>
   <body>
     <div class="container">
@@ -62,6 +62,12 @@
         </div>
         <!-- /.navbar -->
       </div>
+      <div id='dialog' title='Language'>
+        <select id='language' name='language'>
+          <option value='0'>English</option>
+          <option value='1'>日本語</option>
+        </select>
+      </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
         <p class="lead" id='TITLE'>
@@ -70,7 +76,7 @@
       </div>
       <hr />
       <p>
-        <a href='settings.html' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
       </p>
       <hr />
       <div id='MSG_0'>
@@ -131,11 +137,11 @@
       </table>
       <hr />
       <p>
-        <a href='settings.html' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
       </p>
       <hr />
       <div class="footer">
-        <p>&copy; Kazuki Yoshida 2015</p>
+        <p><a href='#' onClick='openLanguageDialog();'>Change Language</a></p>
       </div>
     </div>
   </body>

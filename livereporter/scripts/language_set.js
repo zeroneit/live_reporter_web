@@ -87,3 +87,20 @@ function GetFileName(file_url)
 	file_url = file_url.substring(0,file_url.indexOf('.'));
 	return file_url;
 }
+
+function loadLocalizedHTMLPage(URL)
+{
+	var	lang;
+	lang	= getQueryString('LANG', 'en');
+	switch(lang){
+	case 'en':
+	case 'jp':
+		break;
+	default:
+		lang = 'en';
+		break;
+	}
+
+	window.location.href	= URL + '?LANG=' + lang;
+	return;
+}

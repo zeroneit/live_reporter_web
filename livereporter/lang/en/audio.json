@@ -1,0 +1,6 @@
+{
+	"TITLE"                : "Audio Settings",
+	"SETTING_RETURN"       : "Return to Settings View List",
+	"MSG_0"                : "The audio switch is your iOS device microphone capture ON/OFF.",
+	"MSG_1"                : "<h4>Use Microphone</h4><p>Under audio switch ON mode,</p><p>the data bitrate increase by 192 kbps.</p>"
+}

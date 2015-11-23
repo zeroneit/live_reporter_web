@@ -1,0 +1,14 @@
+{
+	"TITLE"                : "Network Settings",
+	"SETTING_RETURN"       : "Return to Settings View List",
+	"MSG_0"                : "<p>This view changes the setting of network.</p>",
+	"MSG_1"                : "<h4>On Demand Stream Port Number</h4><p>The port number is RTSP connect port number of your iOS device.</p><p>The parameter is limited from 1 to 65535.</p>",
+	"MSG_2"                : "<h4>Authentication</h4><p>The RTSP connect user is limited the RTSP authentication.</p><p>The authentication type is digest method.</p>",
+	"MSG_3"                : "<h4>Push Stream Authentication</h4><p>These user name and password are RTSP authentication of push mode.</p><p>If the broadcast server requests the authentication,</p><p>a authentication dialog are shown on the main view.</p><p>These authenticated user name and password</p><p>are filled to these text fields.</p>",
+	"MSG_4"                : "<h4>Transport Type for Push Stream</h4><p>This switch changes</p><p> network transport stream(UDP/TCP) for</p><p>push stream method.</p>",
+	"MSG_5"                : "<h4>Packet Size</h4><p>This parameter is</p><p>media size of RTP payload.</p><p>In the network characteristic, the packet size limits</p><p>adjusted by this parameter.</p><p>These packet sizes are shown as below.</p>",
+	"MSG_SMALL"            : "SMALL",
+	"MSG_MIDDLE"           : "MIDDLE",
+	"MSG_LARGE"            : "LARGE"
+
+}

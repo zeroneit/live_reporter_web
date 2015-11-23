@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
     <title>Shizuoka Software Developer - Live-Reporter</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Cache-Control' content='no-cache' />
+    <meta http-equiv='Expires' content='Wed, 14 May 2014 09:00:00 GMT' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -13,6 +16,8 @@
     60px 0; } .marketing p + h4 { margin-top: 28px; } /* Customize the navbar links to be fill the entire space of the .navbar */ .navbar .navbar-inner { padding: 0; } .navbar .nav { margin: 0; display: table; width: 100%; } .navbar .nav li { display: table-cell; width: 1%; float: none; } .navbar .nav li a { font-weight: bold; text-align: center; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1); } .navbar .nav li:first-child a { border-left: 0; border-radius: 3px 0 0
     3px; } .navbar .nav li:last-child a { border-right: 0; border-radius: 0 3px 3px 0; }</style>
     <link href="../css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="../js/html5shiv.js"></script>
@@ -23,6 +28,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
     <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
     <link rel="shortcut icon" href="ico/favicon.png" />
+    <script type='text/javascript' src='scripts/jquery.js'></script>
+    <script type='text/javascript' src='scripts/language_set.js'></script>
+    <script type='text/javascript' src='scripts/preset.js'></script>
+    <script type='text/javascript' src='scripts/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
   </head>
   <body>
     <div class="container">
@@ -52,54 +62,64 @@
       </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <p class="lead">
+        <p class="lead" id='TITLE'>
           プリセット
         </p>
       </div>
       <hr />
       <p>
-        <a href='settings.html'>セッティング画面一覧に戻る</a>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
       </p>
       <hr />
-      <p>配信サーバーへ送信する場合、</p>
-      <p>アドレス、ポート番号をプリセットとして、</p>
-      <p>記録しておくことが可能です。</p>
+      <div id='MSG_0'>
+        <p>配信サーバーへ送信する場合、</p>
+        <p>アドレス、ポート番号をプリセットとして、</p>
+        <p>記録しておくことが可能です。</p>
+      </div>
       <div style='width:280px;height:160px;'>
         <img src='img/presetlist.png' style='width:280px;' />
       </div>
       <hr />
-      <h4>プリセット新規追加</h4>
-      <p>新規に配信サーバのプリセットを登録する場合には、</p>
-      <p>このボタンをタップします。</p>
+      <div id='MSG_1'>
+        <h4>プリセット新規追加</h4>
+        <p>新規に配信サーバのプリセットを登録する場合には、</p>
+        <p>このボタンをタップします。</p>
+      </div>
       <hr />
-      <h4>編集開始</h4>
-      <p>すでに幾つかのプリセット情報が登録されている場合に、</p>
-      <p>こちらのボタンをタップすることで、</p>
-      <p>内容を変更することができます。</p>
+      <div id='MSG_2'>
+        <h4>編集開始</h4>
+        <p>すでに幾つかのプリセット情報が登録されている場合に、</p>
+        <p>こちらのボタンをタップすることで、</p>
+        <p>内容を変更することができます。</p>
+      </div>
       <hr />
-      <h4>プリセット新規追加/編集</h4>
-      <p>プリセット新規追加/編集では以下の画面が表示されます。</p>
+      <div id='MSG_3'>
+        <h4>プリセット新規追加/編集</h4>
+        <p>プリセット新規追加/編集では以下の画面が表示されます。</p>
+      </div>
       <div style='width:280px;height:160px;'>
         <img src='img/presetcreate.png' style='width:280px;' />
       </div>
       <hr />
-      <h5>プリセットの名称</h5>
-      <p>プリセットの一覧に表示される名称です。</p>
-      <p>任意の分かりやすい情報を入力します。</p>
-      <h5>配信サーバーアドレス</h5>
-      <p>配信サーバーへのIP/ドメイン名を入力します。</p>
-      <h5>配信サーバーポート番号</h5>
-      <p>配信サーバーにて待ち受けしているポート番号を入力します。</p>
-      <h5>配信サーバーでのストリーム識別名</h5>
-      <p>配信サーバーで識別されるストリーム名称を入力します。</p>
-      <p>命名規則については、使用する配信サーバーごとに異なっています。</p>
-      <p>配信サーバーの設定マニュアル等をご参照ください。</p>
+      <div id='MSG_4'>
+        <h5>プリセットの名称</h5>
+        <p>プリセットの一覧に表示される名称です。</p>
+        <p>任意の分かりやすい情報を入力します。</p>
+        <h5>配信サーバーアドレス</h5>
+        <p>配信サーバーへのIP/ドメイン名を入力します。</p>
+        <h5>配信サーバーポート番号</h5>
+        <p>配信サーバーにて待ち受けしているポート番号を入力します。</p>
+        <h5>配信サーバーでのストリーム識別名</h5>
+        <p>配信サーバーで識別されるストリーム名称を入力します。</p>
+        <p>命名規則については、使用する配信サーバーごとに異なっています。</p>
+        <p>配信サーバーの設定マニュアル等をご参照ください。</p>
+      </div>
       <p>
-        <a href='settings.html'>セッティング画面一覧に戻る</a>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
       </p>
       <hr />
       <div class="footer">
-        <p>&copy; Kazuki Yoshida 2015</p>
+        <p><a href='#' onClick='openLanguageDialog();'>Change Language</a></p>
       </div>
     </div>
   </body>

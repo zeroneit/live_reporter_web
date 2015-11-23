@@ -9,6 +9,6 @@
 	"USE_CLIENT_APP_MSG3"  : "<p>Open source dialog box is shown on display.</p><p>Input your Live-Reporter RTSP address. </p><p>(RTSP address is shown on Live-Reporter main screen. </p><p>You already checked on the screen.) </p><p>And then click 'Open' button.</p>",
 	"USE_SERVER_PUSH"      : "Server push from your iOS device",
 	"USE_SERVER_PUSH_MSG0" : "<p>The announce push method on Live-Reporter is supported by servral servers.</p><p>Ex. <a href='http://dss.macosforge.org/'>Apple corp. DarwinStreamingServer</a>、</p><p><a href='http://www.wowza.com/'>Wowza Media Server</a>.</p>",
-	"USE_SERVER_PUSH_MSG1" : "On Live-Reporter main screen, input your media server address information.</p><p>(IP or name address, port number, application name)</p><p>And then, touched 'Connect' button.",
+	"USE_SERVER_PUSH_MSG1" : "On Live-Reporter main screen, input your media server address information.</p><p>(IP or name address, port number, streaming name (or application name))</p><p>And then, touched 'Connect' button.</p><h5>About streaming name....</h5><p>On wowza streaming server,</p><p>the streaming name are consisted of</p><p>application name, slash symbol and streaming name</p><p>(Ex. live/streamname).</p>",
 	"USE_SERVER_PUSH_MSG2" : "<p><a href='#'>Setup for Darwin Streaming Server</a></p><p><a href='#'>Setup for Wowza Media Server</a></p>"
 }

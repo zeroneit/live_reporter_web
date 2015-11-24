@@ -1,0 +1,12 @@
+{
+	"TITLE"                : "Darwin Streaming Server 設定について",
+	"MAIN_RETURN"          : "メイン画面にもどる",
+	"MSG_0"                : "<p>Darwin Streaming ServerとLive-Reporterの設定方法について説明します。</p><h5>Darwin Streaming Server側の&ldquo;General Settings&rdquo;画面を開きます。</h5><h5>画面一覧の&ldquo;Broadcast Username/Password&rdquo;を開きます。</h5>",
+	"MSG_1"                : "<h5>画面の&ldquo;New User Name&rdquo; と &ldquo;New Password&rdquo;欄に</h5><h5>任意のユーザーIDとパスワードを設定します。</h5><h5>ここでの認証情報は、Live-Reporterにて、</h5><h5>Darwin Streaming Serverに接続した際に要求されます。</h5>",
+	"MSG_2"                : "<h5>Live-Reporterの画面にてDarwin Streaming Serverの情報を入力します。</h5>",
+	"MSG_3"                : "<p>ここでは、タイトル名のフィールドに &ldquo;test.sdp&rdquo; と入力しています。</p><p>&ldquo;test.sdp&rdquo; はストリーム名称で任意に設定したものです。</p>",
+	"MSG_4"                : "<h5>接続ボタンをタップし、認証情報を入力します。</h5>",
+	"MSG_5"                : "<p>ここでのユーザーIDとパスワードは</p><p>Darwin Streaming Server側で設定した</p><p>&ldquo;Broadcast Username/Password&rdquo;情報になります。</p>",
+	"MSG_6"                : "<h5>Darwin Streaming Serverをインストールし</h5><h5>たファイルシステム &ldquo;/usr/local/movies&rdquo; を確認します。</h5>",
+	"MSG_7"                : "<p>先ほどLive-Reporter画面にて入力したストリーム名</p><p>&ldquo;test.sdp&rdquo;のファイルが存在していれば成功です。</p>"
+}

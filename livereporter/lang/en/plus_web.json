@@ -1,0 +1,10 @@
+{
+	"TITLE"                : "WEB Interface - Live-Reporter+",
+	"MAINVIEW_RETURN"      : "Return to Main View",
+	"MSG_0"                : "<p>Live-Reporter+ has WEB interface function.</p><p>The interface allow to setting parameters</p><p>(capture, video, network and etc.) accessing.</p>",
+	"MSG_1"                : "<h4>Main View</h4><p>The WEB interface consists of</p><p>home, video, audio, network and superimpose settings.</p><p>The WEB interface Main(Home) screen is shown as below.</p><p>Live-Reporter+ main screen components are controled by</p><p>these WEB interface text fields and buttons.</p>",
+	"MSG_2"                : "<h4>Video Settings</h4><p>This WEB interface control video setting parameters.</p>",
+	"MSG_3"                : "<h4>Audio Settings</h4><p>This WEB interface control audio setting parameters.</p>",
+	"MSG_4"                : "<h4>Network Settings</h4><p>This WEB interface control network setting parameters.</p>",
+	"MSG_5"                : "<h4>Superimpose Settings</h4><p>This WEB interface control superimpose setting parameters.</p>"
+}

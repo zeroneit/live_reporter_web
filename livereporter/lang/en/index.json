@@ -1,6 +1,6 @@
 {
 	"TITLE"                : "About Live-Reporter",
-	"TITLE_MSG"            : "<p>Live-Reporter is camera server application on iOS device.</p><p>The transmitted video and audio are played on PC or smartphone applications.</p><p>In addition, Live-Reporter can send to several media servers by announced push method.</p><p>This page is 'How to use for Live-Reporter'.</p>",
+	"TITLE_MSG"            : "<p>Live-Reporter is camera server application on iOS device.</p><p>The transmitted video and audio are played on PC or smartphone applications.</p><p>In addition, Live-Reporter can send to several media servers by announced push method.</p><p>This page is 'How to use for Live-Reporter'.</p><a href='http://app-liv.jp/996017825/' >Thank you review and introducing Appliv</a>",
 	"OTHER_FUNCTION"       : "Other functions",
 	"BROADCAST_SERVER"     : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>About Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB Interface - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Setup for Wowza Media Server</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Setup for Darwin Streaming Server</a></p>",
 	"USE_CLIENT_APP"       : "On demand stream by client application",

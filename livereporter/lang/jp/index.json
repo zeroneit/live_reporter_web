@@ -1,6 +1,6 @@
 {
 	"title"                : "LiveReporterについて",
-	"TITLE_MSG"            : "<p>LiveReporterはiOS上からカメラ映像を伝送するアプリケーションです。</p><p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p><p>また、オープンソースもしくは有料の配信サーバーへ向け</p><p>映像をプッシュ送信することができます。</p><p>本ページでは、基本的な使用方法の説明を記載しています。</p><a href='http://app-liv.jp/996017825/' >Thank you review and introducing Appliv</a>",
+	"TITLE_MSG"            : "<p>LiveReporterはiOS上からカメラ映像を伝送するアプリケーションです。</p><p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p><p>また、オープンソースもしくは有料の配信サーバーへ向け</p><p>映像をプッシュ送信することができます。</p><p>本ページでは、基本的な使用方法の説明を記載しています。</p>",
 	"OTHER_FUNCTION"       : "その他の機能について",
 	"BROADCAST_SERVER"     : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>Live-Reporter+について</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB画面 - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Wowza Media Serverをセットアップする</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Darwin Streaming Serverをセットアップする</a></p>",
 	"USE_CLIENT_APP"       : "クライアントアプリを使った伝送",

@@ -11,3 +11,11 @@
 	background-color:#333;
 	height: 25px;
 }
+
+.sns_link{
+	float:left;
+}
+
+.sns_icons{
+	margin-left:30px;
+}

@@ -15,9 +15,11 @@
     <!-- Le styles -->
     <script type="text/javascript" src="/js/acctag.js"></script>
     <link href="../css/bootstrap.css" rel="stylesheet" />
-    <style type="text/css">body { padding-top: 20px; padding-bottom: 60px; } /* Custom container */ .container { margin: 0 auto; max-width: 1000px; } .container &gt; hr { margin: 60px 0; } /* Main marketing message and sign up button */ .jumbotron { margin: 20px 0; text-align: left; } .jumbotron h1 { font-size: 100px; line-height: 1; } .jumbotron .lead { font-size: 24px; line-height: 1.25; } .jumbotron .btn { font-size: 21px; padding: 14px 24px; } /* Supporting marketing content */ .marketing { margin:
-    60px 0; } .marketing p + h4 { margin-top: 28px; } /* Customize the navbar links to be fill the entire space of the .navbar */ .navbar .navbar-inner { padding: 0; } .navbar .nav { margin: 0; display: table; width: 100%; } .navbar .nav li { display: table-cell; width: 1%; float: none; } .navbar .nav li a { font-weight: bold; text-align: center; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1); } .navbar .nav li:first-child a { border-left: 0; border-radius: 3px 0 0
-    3px; } .navbar .nav li:last-child a { border-right: 0; border-radius: 0 3px 3px 0; }</style>
+    <style type="text/css">body { padding-top: 20px; padding-bottom: 60px; } /* Custom container */ .container { margin: 0 auto; max-width: 1000px; } .container &gt; hr { margin: 60px 0; } /* Main marketing message and sign up button */ .jumbotron {
+    margin: 20px 0; text-align: left; } .jumbotron h1 { font-size: 100px; line-height: 1; } .jumbotron .lead { font-size: 24px; line-height: 1.25; } .jumbotron .btn { font-size: 21px; padding: 14px 24px; } /* Supporting marketing content */ .marketing {
+    margin: 60px 0; } .marketing p + h4 { margin-top: 28px; } /* Customize the navbar links to be fill the entire space of the .navbar */ .navbar .navbar-inner { padding: 0; } .navbar .nav { margin: 0; display: table; width: 100%; } .navbar .nav li {
+    display: table-cell; width: 1%; float: none; } .navbar .nav li a { font-weight: bold; text-align: center; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1); } .navbar .nav li:first-child a { border-left: 0;
+    border-radius: 3px 0 0 3px; } .navbar .nav li:last-child a { border-right: 0; border-radius: 0 3px 3px 0; }</style>
     <link href="../css/bootstrap-responsive.css" rel="stylesheet" />
     <link href="css/template.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/jquery-ui.css" />
@@ -38,6 +40,9 @@
     <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.5"; fjs.parentNode.insertBefore(js,
+    fjs); }(document, 'script', 'facebook-jssdk'));</script>
     <div class="container">
       <div class="masthead">
         <h4 class="muted">Shizuoka Software Developer</h4>
@@ -71,109 +76,101 @@
       </div>
       <!-- Jumbotron -->
       <div class="jumbotron">
-        <p class="lead" id='TITLE'>Live-Reporterについて</p>
-        <a href="https://geo.itunes.apple.com/jp/app/live-reporter/id996017825?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
+        <p class='sns_link'>
+          <a class='sns_icons' href='https://twitter.com/kzkysdjpn01'>
+            <img width='32' src='../img/twitter_logo.png' />
+          </a>
+          <a class='sns_icons' href='https://www.facebook.com/kzkysdjpn'>
+            <img width='32' src='../img/facebook.png' />
+          </a>
+          <div class="fb-like" style='margin-left:20px;' data-href="http://kzkysdjpn.mydns.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+        </p>
+        <p style='margin-top:40px;'><a style='clear:both;' href='http://app-liv.jp/996017825/'>Thank you review and introducing Appliv.</a></p>
+        <p class="lead" id='TITLE' style='clear:both;'>Live-Reporterについて</p>
+        <a href="https://geo.itunes.apple.com/jp/app/live-reporter/id996017825?mt=8"
+        style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
         <div id='TITLE_MSG'>
-        <p>
-          Live-ReporterはiOS上からカメラ映像を伝送するアプリケーションです。
-        </p>
-        <p>
-          伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。
-        </p>
-        <p>
-          また、オープンソースもしくは有料の配信サーバーへ向け映像をプッシュ送信することができます。
-        </p>
-        <p>
-          本ページでは、基本的な使用方法の説明を記載しています。
-        </p>
+          <p>Live-ReporterはiOS上からカメラ映像を伝送するアプリケーションです。</p>
+          <p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p>
+          <p>また、オープンソースもしくは有料の配信サーバーへ向け映像をプッシュ送信することができます。</p>
+          <p>本ページでは、基本的な使用方法の説明を記載しています。</p>
         </div>
       </div>
       <hr />
-        <p><a href="#" onclick='loadLocalizedHTMLPage("settings.html")' id='OTHER_FUNCTION'>その他の機能について</a></p>
-        <div id='BROADCAST_SERVER'></div>
+      <p>
+        <a href="#" onclick='loadLocalizedHTMLPage("settings.html")' id='OTHER_FUNCTION'>その他の機能について</a>
+      </p>
+      <div id='BROADCAST_SERVER'></div>
       <hr />
-        <h4 id='USE_CLIENT_APP'>クライアントアプリを使った伝送</h4>
-        <p id='USE_CLIENT_APP_MSG0'>
-          クライアントアプリは代表的なものとして<a href='http://www.videolan.org'>VideoLANプロジェクトのVLCプレーヤー</a>があります。
-        </p>
-        <div style='width:280px;height:120px;'>
-          <img src='img/FromVLCRequest.png' style='width:280px;' />
-        </div>
-        <div id='USE_CLIENT_APP_MSG1'>
-        <p>
-          アプリ起動後、下記の画面が表示されます。画面下部に表示されたアドレスを確認してください。
-        </p>
-        <p>
-          iPhone/iPodTouchに複数のIPアドレスが与えられている場合、表示されているアドレスをタップすることで、
-        </p>
-        <p>
-          他に与えられているアドレス情報を表示することができます。
-        </p>
-        </div>
-        <div style='width:280px;height:140px;'>
-          <img src='img/RequestAddressInMainView.png' style='width:280px;' />
-        </div>
-        <br />
-        <div id='USE_CLIENT_APP_MSG2'>
-        <p>
-          PCもしくはスマートフォン側にてVLCプレイヤーを起動します。
-        </p>
-        <p>
-          「ファイル」->「ネットワークを開く」を選択します。
-        </p>
-        </div>
-        <div style='width:280;height:220px;'>
-          <img src='img/VLCNetworkMenu.png' style='width:240px;' />
-        </div>
-        <div id='USE_CLIENT_APP_MSG3'>
-        <p>
-          「ソースを開く」のダイアログが表示されます。
-        </p>
-        <p>
-          「URL」の欄に先ほどアプリにて表示されたアドレスを入力し、「開く」ボタンを押します。
-        </p>
-        </div>
-        <div style='width:280;height:200px;'>
-          <img src='img/VLCNetworkDialog.png' style='width:280px;' />
-        </div>
+      <h4 id='USE_CLIENT_APP'>クライアントアプリを使った伝送</h4>
+      <p id='USE_CLIENT_APP_MSG0'>クライアントアプリは代表的なものとして 
+      <a href='http://www.videolan.org'>VideoLANプロジェクトのVLCプレーヤー</a>があります。</p>
+      <div style='width:280px;height:120px;'>
+        <img src='img/FromVLCRequest.png' style='width:280px;' />
+      </div>
+      <div id='USE_CLIENT_APP_MSG1'>
+        <p>アプリ起動後、下記の画面が表示されます。画面下部に表示されたアドレスを確認してください。</p>
+        <p>iPhone/iPodTouchに複数のIPアドレスが与えられている場合、表示されているアドレスをタップすることで、</p>
+        <p>他に与えられているアドレス情報を表示することができます。</p>
+      </div>
+      <div style='width:280px;height:140px;'>
+        <img src='img/RequestAddressInMainView.png' style='width:280px;' />
+      </div>
+      <br />
+      <div id='USE_CLIENT_APP_MSG2'>
+        <p>PCもしくはスマートフォン側にてVLCプレイヤーを起動します。</p>
+        <p>「ファイル」-&gt;「ネットワークを開く」を選択します。</p>
+      </div>
+      <div style='width:280;height:220px;'>
+        <img src='img/VLCNetworkMenu.png' style='width:240px;' />
+      </div>
+      <div id='USE_CLIENT_APP_MSG3'>
+        <p>「ソースを開く」のダイアログが表示されます。</p>
+        <p>「URL」の欄に先ほどアプリにて表示されたアドレスを入力し、「開く」ボタンを押します。</p>
+      </div>
+      <div style='width:280;height:200px;'>
+        <img src='img/VLCNetworkDialog.png' style='width:280px;' />
+      </div>
       <hr />
-        <h4 id='USE_SERVER_PUSH'>サーバーへのプッシュ伝送</h4>
-        <div id='USE_SERVER_PUSH_MSG0'>
+      <h4 id='USE_SERVER_PUSH'>サーバーへのプッシュ伝送</h4>
+      <div id='USE_SERVER_PUSH_MSG0'>
+        <p>本アプリが対応するプッシュ伝送できる配信サーバーは、</p>
         <p>
-          本アプリが対応するプッシュ伝送できる配信サーバーは、
-        </p>
-        <p>
-          <a href="http://dss.macosforge.org/">Apple製DarwinStreamingServer</a>、
-        </p>
+        <a href="http://dss.macosforge.org/">Apple製DarwinStreamingServer</a>、</p>
         <p>
           <a href="http://www.wowza.com/">Wowza Media Server</a>
         </p>
-        <p>
-          などがあげられます。
-        </p>
-        </div>
-        <div style='width:280;height:320px;'>
-          <img src='img/ToServerRequest.png' style='width:280px;' />
-        </div>
-        <div id='USE_SERVER_PUSH_MSG1'>
-        <p>
-          アプリ起動画面にて、上部に表示されたアドレス入力欄にサーバーアドレスを入力し、接続ボタンを押してください。
-        </p>
-        </div>
-        <div style='width:280;height:180px;'>
-          <img src='img/InputServerAddressInMainView.png' style='width:280px;' />
-        </div>
-        <div id='USE_SERVER_PUSH_MSG2'>
-        <p>
-          各サーバーの設定方法については、サポートページの方に説明をご参照ください。
-        </p>
+        <p>などがあげられます。</p>
+      </div>
+      <div style='width:280;height:320px;'>
+        <img src='img/ToServerRequest.png' style='width:280px;' />
+      </div>
+      <div id='USE_SERVER_PUSH_MSG1'>
+        <p>アプリ起動画面にて、上部に表示されたアドレス入力欄にサーバーアドレスを入力し、接続ボタンを押してください。</p>
+      </div>
+      <div style='width:280;height:180px;'>
+        <img src='img/InputServerAddressInMainView.png' style='width:280px;' />
+      </div>
+      <div id='USE_SERVER_PUSH_MSG2'>
+        <p>各サーバーの設定方法については、サポートページの方に説明をご参照ください。</p>
         <p>
           <a href="/dss">DarwinStreamingServer6.0.3について</a>
         </p>
-        </div>
+      </div>
       <hr />
+      <p class='sns_link'>
+        <a class='sns_icons' href='https://twitter.com/kzkysdjpn01'>
+          <img width='32' src='../img/twitter_logo.png' />
+        </a>
+        <a class='sns_icons' href='https://www.facebook.com/kzkysdjpn'>
+          <img width='32' src='../img/facebook.png' />
+        </a>
+        <div class="fb-like" style='margin-left:20px;' data-href="http://kzkysdjpn.mydns.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+      </p>
       <div class="footer">
-        <p><a href='#' onClick='openLanguageDialog();'>Change Language</a></p>
+        <p>
+          <a href='#' onClick='openLanguageDialog();'>Change Language</a>
+        </p>
       </div>
     </div>
   </body>

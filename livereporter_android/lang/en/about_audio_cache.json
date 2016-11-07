@@ -1,0 +1,5 @@
+{
+	"TITLE"                : "About audio cache buffer in VLC Player",
+	"TITLE_MSG"            : "<p>You will need to adjust audio cache buffer size in VLC player.</p><p>This page is 'How to change for cache buffer size in VLC player'.</p>",
+	"MSG_0000"             : "\"Media\"->\"Open Network Stream\""
+}

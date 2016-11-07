@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="ico/favicon.png" />
     <script type='text/javascript' src='scripts/jquery.js'></script>
     <script type='text/javascript' src='scripts/language_set.js'></script>
-    <script type='text/javascript' src='scripts/index.js'></script>
+    <script type='text/javascript' src='scripts/about_audio_cache.js'></script>
     <script type='text/javascript' src='scripts/jquery-ui.min.js'></script>
     <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
   </head>
@@ -85,88 +85,17 @@
           </a>
           <div class="fb-like" style='margin-left:20px;' data-href="http://kzkysdjpn.mydns.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
         </p>
-        <p style='margin-top:40px;'><a style='clear:both;' href='http://app-liv.jp/996017825/'>Thank you review and introducing Appliv.</a></p>
-        <p class="lead" id='TITLE' style='clear:both;'>Live-Reporterについて</p>
-        <a href="https://geo.itunes.apple.com/jp/app/live-reporter/id996017825?mt=8"
-        style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
-        <div id='TITLE_MSG'>
-          <p>Live-ReporterはiOS上からカメラ映像を伝送するアプリケーションです。</p>
-          <p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p>
-          <p>また、オープンソースもしくは有料の配信サーバーへ向け映像をプッシュ送信することができます。</p>
-          <p>本ページでは、基本的な使用方法の説明を記載しています。</p>
-        </div>
+        <p class="lead" id='TITLE' style='clear:both;'></p>
+        <div id='TITLE_MSG'></div>
       </div>
       <hr />
-      <p>
-        <a href="#" onclick='loadLocalizedHTMLPage("settings.html")' id='OTHER_FUNCTION'>その他の機能について</a>
-      </p>
-      <div id='BROADCAST_SERVER'></div>
-      <hr />
-      <h4 id='USE_CLIENT_APP'>クライアントアプリを使った伝送</h4>
-      <p id='USE_CLIENT_APP_MSG0'>クライアントアプリは代表的なものとして 
-      <a href='http://www.videolan.org'>VideoLANプロジェクトのVLCプレーヤー</a>があります。</p>
-      <div style='width:280px;height:120px;'>
-        <img src='img/FromVLCRequest.png' style='width:280px;' />
+      <div style='width:280px;height:220px;'>
+        <img src='img/audio_cache_about_page_0000.png' style='width:280px;' />
       </div>
-      <div id='USE_CLIENT_APP_MSG1'>
-        <p>アプリ起動後、下記の画面が表示されます。画面下部に表示されたアドレスを確認してください。</p>
-        <p>iPhone/iPodTouchに複数のIPアドレスが与えられている場合、表示されているアドレスをタップすることで、</p>
-        <p>他に与えられているアドレス情報を表示することができます。</p>
+      <div id='MSG_0000'></div>
+      <div style='width:280px;height:280px;'>
+        <img src='img/audio_cache_about_page_0001.png' style='width:280px;' />
       </div>
-      <div style='width:280px;height:140px;'>
-        <img src='img/RequestAddressInMainView.png' style='width:280px;' />
-      </div>
-      <br />
-      <div id='USE_CLIENT_APP_MSG2'>
-        <p>PCもしくはスマートフォン側にてVLCプレイヤーを起動します。</p>
-        <p>「ファイル」-&gt;「ネットワークを開く」を選択します。</p>
-      </div>
-      <div style='width:280;height:260px;'>
-        <img id='vlc_network_menu' src='img/VLCNetworkMenu.png' style='width:240px;' />
-      </div>
-      <div id='USE_CLIENT_APP_MSG3'>
-        <p>「ソースを開く」のダイアログが表示されます。</p>
-        <p>「URL」の欄に先ほどアプリにて表示されたアドレスを入力し、「開く」ボタンを押します。</p>
-      </div>
-      <div style='width:280;height:200px;'>
-        <img id='vlc_network_dialog' src='img/VLCNetworkDialog.png' style='width:280px;' />
-      </div>
-      <hr />
-      <h4 id='USE_SERVER_PUSH'>サーバーへのプッシュ伝送</h4>
-      <div id='USE_SERVER_PUSH_MSG0'>
-        <p>本アプリが対応するプッシュ伝送できる配信サーバーは、</p>
-        <p>
-        <a href="http://dss.macosforge.org/">Apple製DarwinStreamingServer</a>、</p>
-        <p>
-          <a href="http://www.wowza.com/">Wowza Media Server</a>
-        </p>
-        <p>などがあげられます。</p>
-      </div>
-      <div style='width:280;height:320px;'>
-        <img src='img/ToServerRequest.png' style='width:280px;' />
-      </div>
-      <div id='USE_SERVER_PUSH_MSG1'>
-        <p>アプリ起動画面にて、上部に表示されたアドレス入力欄にサーバーアドレスを入力し、接続ボタンを押してください。</p>
-      </div>
-      <div style='width:280;height:180px;'>
-        <img src='img/InputServerAddressInMainView.png' style='width:280px;' />
-      </div>
-      <div id='USE_SERVER_PUSH_MSG2'>
-        <p>各サーバーの設定方法については、サポートページの方に説明をご参照ください。</p>
-        <p>
-          <a href="/dss">DarwinStreamingServer6.0.3について</a>
-        </p>
-      </div>
-      <hr />
-      <p class='sns_link'>
-        <a class='sns_icons' href='https://twitter.com/kzkysdjpn01'>
-          <img width='32' src='../img/twitter_logo.png' />
-        </a>
-        <a class='sns_icons' href='https://www.facebook.com/kzkysdjpn'>
-          <img width='32' src='../img/facebook.png' />
-        </a>
-        <div class="fb-like" style='margin-left:20px;' data-href="http://kzkysdjpn.mydns.jp" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
-      </p>
       <div class="footer">
         <p>
           <a href='#' onClick='openLanguageDialog();'>Change Language</a>

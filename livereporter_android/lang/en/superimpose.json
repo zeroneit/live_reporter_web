@@ -1,0 +1,10 @@
+{
+	"TITLE"                : "Superimpose Settings",
+	"SETTING_RETURN"       : "Return to Settings View List",
+	"MSG_0"                : "<h4>Time Information ON/OFF</h4><p>The swich changes time information display ON/OFF on encoded frame buffer.</p>",
+	"MSG_1"                : "<h4>Time Display Position</h4><p>These radio buttons change to the time information display</p><p>position on the encoded frame buffer.</p><p>These position radio buttons are disabled by the time information display off.</p>",
+	"MSG_2"                : "<h4>GPS Geocoding ON/OFF</h4><p>The switch changes address information display on encoded frame buffer.</p><p>This information is disabled by some iOS device conditions</p><p>(Internet disconnection, GPS not working and etc.).</p>",
+	"MSG_3"                : "<h4>GPS Geocoding Display Position</h4><p>These radio buttons change to the GPS geocoding information display</p><p>position on the encoded frame buffer.</p><p>These position are buttom or top on the encoded frame buffer.</p>",
+	"MSG_4"                : "<h4>Background ON/OFF</h4><p>These information backgrounds are filled to black color by this parameter.</p>",
+	"MSG_5"                : "<h4>About These Information Display</h4><p>The long name address informations are out of</p><p>the low resolution on capture frame buffer.</p>"
+}

@@ -1,0 +1,13 @@
+{
+	"TITLE"                : "Wowza Media Server 設定について",
+	"MAIN_RETURN"          : "メイン画面にもどる",
+	"MSG_0"                : "<p>Wowza Media ServerとLive-Reporterの設定方法について説明します。</p><h5>Wowza側の&ldquo;Server&rdquo;設定画面を開きます。</h5>",
+	"MSG_1"                : "<h5>新規パブリッシャーを作成します。</h5><h5>既に、使用するパブリッシャーが存在する場合は、</h5><h5>このステップは飛ばしてください。</h5>",
+	"MSG_2"                : "<h5>&ldquo;Application->live->Incoming Streams&rdquo;画面を開き、</h5><h5>配信中のストリームを確認します。</h5><p>&ldquo;live&rdquo; と表示されているのは、Wowza Media Serverにて</p><p>初期値にて作成されたアプリケーション名です。</p>",
+	"MSG_3"                : "<h5>Live-Reporter側でのWowza Media Serverの情報を入力します。</h5>",
+	"MSG_4"                : "<p>ここでは、タイトル名のフィールドに &ldquo;live/test&rdquo; と入力しています。</p><p>&ldquo;live&rdquo; と &ldquo;test&rdquo; は、それぞれアプリケーション名とストリーム名となっています。</p><p>アプリケーション名については、Wowza側にて<p></p>設定されているものと同一にしなければなりません。</p><p>ストリーム名については、任意の名前を設定します。</p>",
+	"MSG_5"                : "<h5>接続ボタンをタップし、認証情報を入力します。</h5>",
+	"MSG_6"                : "<p>ここでのユーザーIDとパスワードは</p><p>Wowza側で設定したパブリッシャー情報になります。</p>",
+	"MSG_7"                : "<h5>Wowza側の&ldquo;Incoming Streams&rdquo; 画面を確認します。</h5>",
+	"MSG_8"                : "<p>先ほど任意に設定したストリーム名称が</p><p>&ldquo;Incoming Streams&rdquo; リスト画面に表示されていれば成功です。</p>"
+}

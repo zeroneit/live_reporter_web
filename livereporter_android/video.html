@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shizuoka Software Developer - Live-Reporter</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Cache-Control' content='no-cache' />
+    <meta http-equiv='Expires' content='Wed, 14 May 2014 09:00:00 GMT' />
+    <meta name="keywords" content="apple,ios,application,camera server,Live-Reporter,RTSP,RTP,H.264" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=medium-dpi" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Le styles -->
+    <script type="text/javascript" src="/js/acctag.js"></script>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">body { padding-top: 20px; padding-bottom: 60px; } /* Custom container */ .container { margin: 0 auto; max-width: 1000px; } .container &gt; hr { margin: 60px 0; } /* Main marketing message and sign up button */ .jumbotron { margin: 20px 0; text-align: left; } .jumbotron h1 { font-size: 100px; line-height: 1; } .jumbotron .lead { font-size: 24px; line-height: 1.25; } .jumbotron .btn { font-size: 21px; padding: 14px 24px; } /* Supporting marketing content */ .marketing { margin:
+    60px 0; } .marketing p + h4 { margin-top: 28px; } /* Customize the navbar links to be fill the entire space of the .navbar */ .navbar .navbar-inner { padding: 0; } .navbar .nav { margin: 0; display: table; width: 100%; } .navbar .nav li { display: table-cell; width: 1%; float: none; } .navbar .nav li a { font-weight: bold; text-align: center; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1); } .navbar .nav li:first-child a { border-left: 0; border-radius: 3px 0 0
+    3px; } .navbar .nav li:last-child a { border-right: 0; border-radius: 0 3px 3px 0; }</style>
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
+    <script type='text/javascript' src='scripts/jquery.js'></script>
+    <script type='text/javascript' src='scripts/language_set.js'></script>
+    <script type='text/javascript' src='scripts/video.js'></script>
+    <script type='text/javascript' src='scripts/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <h4 class="muted">Shizuoka Software Developer</h4>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li>
+                  <a href="/" style='font-size:10px;'>Home</a>
+                </li>
+                <li class="active">
+                  <a href="/software.html" style='font-size:10px;'>Software</a>
+                </li>
+                <li>
+                  <a href="/support.html" style='font-size:10px;'>Support</a>
+                </li>
+                <li>
+                  <a href="/contact.html" style='font-size:10px;'>Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /.navbar -->
+      </div>
+      <div id='dialog' title='Language'>
+        <select id='language' name='language'>
+          <option value='0'>English</option>
+          <option value='1'>日本語</option>
+        </select>
+      </div>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <p class="lead" id='TITLE'>
+          映像設定画面
+        </p>
+      </div>
+      <hr />
+      <p>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
+      </p>
+      <hr />
+      <div id='MSG_0'>
+        <p>映像設定画面では、</p>
+        <p>カメラでキャプチャーされる解像度、</p>
+        <p>フレームレート、</p>
+        <p>配信される映像の画質</p>
+        <p>を変更することができます。</p>
+      </div>
+      <div style='width:280px;height:160px;'>
+        <img src='img/videosetting.png' style='width:280px;' />
+      </div>
+      <hr />
+      <div id='MSG_1'>
+        <h4>カメラ解像度</h4>
+        <p>iOSデバイスでキャプチャされるカメラ解像度を変更します。</p>
+        <p>対応している解像度は下記の通りです。</p>
+      </div>
+      <p>192 x 144</p>
+      <p>352 x 288</p>
+      <p>640 x 480</p>
+      <p>1280 x 720</p>
+      <p>1920 x 1080</p>
+      <hr />
+      <div id='MSG_2'>
+        <h4>フレームレート</h4>
+        <p>キャプチャー時のフレームレートを変更します。</p>
+        <p>フレームレートを低くすると画質は向上しますが、</p>
+        <p>動画としての滑らかな表示ではなくなります。</p>
+        <p>対応しているフレームレートは下記の通りです。</p>
+      </div>
+      <p>5 fps</p>
+      <p>10 fps</p>
+      <p>15 fps</p>
+      <p>20 fps</p>
+      <p>30 fps</p>
+      <hr />
+      <div id='MSG_3'>
+        <h4>エンコード品質</h4>
+        <p>カメラからキャプチャー後、</p>
+        <p>エンコードされる映像の品質を変更できます。</p>
+        <p>帯域の狭いところでは、品質を低く、</p>
+        <p>帯域の広いところでは、高画質の映像を配信できます。</p>
+        <p>対応している品質は下記のとおりです。</p>
+        <p>低</p>
+        <p>中</p>
+        <p>高</p>
+        <hr />
+        <p>カメラ解像度、エンコードの品質を</p>
+        <p>変更すると画面上部に表示されている、ビットレート表示が変更されます。</p>
+        <p>カメラ解像度に対するエンコード品質とビットレートの対応は以下となります。</p>
+      </div>
+      <table border='1' style='font-size:8px;'>
+        <tr><th width='16'></th><th width='64'>194x144</th><th width='64'>352x288</th><th width='64'>640x480</th><th width='64'>1280x720</th><th width='64'>1920x1080</th></tr>
+        <tr><td id='MSG_LOW'>低</td><td>64kbps</td><td>128kbps</td><td>256kbps</td><td>768kbps</td><td>1Mbps</td></tr>
+        <tr><td id='MSG_MIDDLE'>中</td><td>96kbps</td><td>256kbps</td><td>512kbps</td><td>1Mbps</td><td>2Mbps</td></tr>
+        <tr><td id='MSG_HIGH'>高</td><td>256kbps</td><td>512kbps</td><td>1Mbps</td><td>2Mbps</td><td>4Mbps</td></tr>
+      </table>
+      <hr />
+      <p>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
+      </p>
+      <hr />
+      <div class="footer">
+        <p><a href='#' onClick='openLanguageDialog();'>Change Language</a></p>
+      </div>
+    </div>
+  </body>
+</html>

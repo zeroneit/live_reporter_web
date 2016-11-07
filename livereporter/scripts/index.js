@@ -9,9 +9,24 @@ function setupIndex(lang)
 	return;
 }
 
+function setupImage(lang)
+{
+	switch(lang){
+	case 'en':
+	default:
+		$('#vlc_network_menu').attr('src', 'img/VLCNetworkMenu_EN.png');
+		$('#vlc_network_dialog').attr('src', 'img/VLCNetworkDialog_EN.png');
+		break;
+	case 'jp':
+		break;
+	}
+	return;
+}
+
 function setupLanguage(lang)
 {
 	setupLanguageDialog();
+	setupImage(lang);
 	$.ajax({
 		type:         'get',
 		url:          'lang/' + lang + '/index.json',

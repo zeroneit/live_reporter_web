@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Shizuoka Software Developer - Live-Reporter</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta http-equiv='Pragma' content='no-cache' />
+    <meta http-equiv='Cache-Control' content='no-cache' />
+    <meta http-equiv='Expires' content='Wed, 14 May 2014 09:00:00 GMT' />
+    <meta name="keywords" content="apple,ios,application,camera server,Live-Reporter,RTSP,RTP,H.264" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- Le styles -->
+    <script type="text/javascript" src="/js/acctag.js"></script>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <style type="text/css">body { padding-top: 20px; padding-bottom: 60px; } /* Custom container */ .container { margin: 0 auto; max-width: 1000px; } .container &gt; hr { margin: 60px 0; } /* Main marketing message and sign up button */ .jumbotron { margin: 20px 0; text-align: left; } .jumbotron h1 { font-size: 100px; line-height: 1; } .jumbotron .lead { font-size: 24px; line-height: 1.25; } .jumbotron .btn { font-size: 21px; padding: 14px 24px; } /* Supporting marketing content */ .marketing { margin:
+    60px 0; } .marketing p + h4 { margin-top: 28px; } /* Customize the navbar links to be fill the entire space of the .navbar */ .navbar .navbar-inner { padding: 0; } .navbar .nav { margin: 0; display: table; width: 100%; } .navbar .nav li { display: table-cell; width: 1%; float: none; } .navbar .nav li a { font-weight: bold; text-align: center; border-left: 1px solid rgba(255,255,255,.75); border-right: 1px solid rgba(0,0,0,.1); } .navbar .nav li:first-child a { border-left: 0; border-radius: 3px 0 0
+    3px; } .navbar .nav li:last-child a { border-right: 0; border-radius: 0 3px 3px 0; }</style>
+    <link href="../css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="css/template.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.js"></script>
+    <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png" />
+    <link rel="shortcut icon" href="ico/favicon.png" />
+    <script type='text/javascript' src='scripts/jquery.js'></script>
+    <script type='text/javascript' src='scripts/language_set.js'></script>
+    <script type='text/javascript' src='scripts/network.js'></script>
+    <script type='text/javascript' src='scripts/jquery-ui.min.js'></script>
+    <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <h4 class="muted">Shizuoka Software Developer</h4>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <div class="container">
+              <ul class="nav">
+                <li>
+                  <a href="/" style='font-size:10px;'>Home</a>
+                </li>
+                <li class="active">
+                  <a href="/software.html" style='font-size:10px;'>Software</a>
+                </li>
+                <li>
+                  <a href="/support.html" style='font-size:10px;'>Support</a>
+                </li>
+                <li>
+                  <a href="/contact.html" style='font-size:10px;'>Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /.navbar -->
+      </div>
+      <div id='dialog' title='Language'>
+        <select id='language' name='language'>
+          <option value='0'>English</option>
+          <option value='1'>日本語</option>
+        </select>
+      </div>
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <p class="lead" id='TITLE'>
+          ネットワーク設定
+        </p>
+      </div>
+      <hr />
+      <p>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
+      </p>
+      <hr />
+      <div id='MSG_0'>
+        <p>ネットワーク機能に関するパラメータを</p>
+        <p>変更することができます。</p>
+      </div>
+      <div style='width:280px;height:160px;'>
+        <img src='img/networksetting.png' style='width:280px;' />
+      </div>
+      <hr />
+      <div id='MSG_1'>
+        <h4>待ち受けポート番号</h4>
+        <p>iOSへ、直接RTSPで接続する場合のポート番号になります。</p>
+        <p>設定可能な範囲は1-65535までとなります。</p>
+        <p>iOSのバージョン、システムにより設定できない場合があります。</p>
+      </div>
+      <hr />
+      <div id='MSG_2'>
+        <h4>認証</h4>
+        <p>iOSへ、直接RTSPで接続する場合の認証設定となります。</p>
+        <p>本ソフトウェアでは、ダイジェスト認証を使用しています。</p>
+      </div>
+      <hr />
+      <div id='MSG_3'>
+        <h4>配信サーバー認証</h4>
+        <p>配信サーバーへ接続するための認証情報を入力できます。</p>
+        <p>こちらで、認証情報を入力していない場合、</p>
+        <p>または、配信サーバー側と認証が合わない場合、</p>
+        <p>認証情報を要求するダイアログが</p>
+        <p>都度表示されるようになっています。</p>
+        <p>ダイアログにて認証情報を</p>
+        <p>入力した場合、こちらの値は上書きされます。</p>
+      </div>
+      <hr />
+      <div id='MSG_4'>
+        <h4>トランスポートタイプ</h4>
+        <p>配信サーバへ向けて送信するメディアパケットの</p>
+        <p>トランスポートタイプを変更します。</p>
+        <p>TCPはパケットロスの発生は再送機構により</p>
+        <p>映像の乱れは減りますが、映像は遅延して送られます。</p>
+        <p>UDPは再送機構がないため、TCPに比べ、</p>
+        <p>リアルタイムに映像を配信しますが、</p>
+        <p>パケットロスによる映像の乱れが発生しやすくなります。</p>
+        <p>またUDPでは、ルーター等の機器がネットワーク上に存在する場合、</p>
+        <p>複数のポート設定を行う必要が有あるか、</p>
+        <p>VPNなどの設定を行えるルーターを準備する必要が有ります。</P>
+      </div>
+      <hr />
+      <div id='MSG_5'>
+        <h4>パケットサイズ</h4>
+        <p>本ソフトウェアでは、</p>
+        <p>メディアパケットを複数に分割、もしくは結合して送信します。</p>
+        <p>ネットワーク上の特性により、サイズの制限がある場合に、</p>
+        <p>こちらのパラメータで調整することができます。</p>
+        <p>各パラメータにおける実際の数値は以下の通りとなります。</p>
+      </div>
+      <table border='1'>
+        <tr><td id='MSG_SMALL' width='16'>小</td><td>512Byte</td></tr>
+        <tr><td id='MSG_MIDDLE'>中</td><td>1024Byte</td></tr>
+        <tr><td id='MSG_LARGE'>大</td><td>1472Byte</td></tr>
+      </table>
+      <hr />
+      <p>
+        <a href='#' onclick='loadLocalizedHTMLPage("settings.html")' class='SETTING_RETURN'>セッティング画面一覧に戻る</a>
+      </p>
+      <hr />
+      <div class="footer">
+        <p><a href='#' onClick='openLanguageDialog();'>Change Language</a></p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+	"MAINVIEW_RETURN"      : "Return to Main View",
+	"TITLE"                : "Custom URL Feature Support",
+	"SUPPORT_MSG"          : "Version 1.4 later support",
+	"MSG_0"                : "<p>Live-Reporter and Live-Reporter+ has</p><p>custom URL scheme feature.</p><p>This page describes to</p><p>the custom URL feature for</p><p>the Live-Reporter and Live-Reporter+</p>",
+	"CAUTION_MSG"          : "<p>This custom URL overwrites your user name and password.</p>",
+	"LL_FREE0"             : "Launch Live-Reporter",
+	"LL_FREE1"             : "Setup Host Name, Port Number and Stream Name",
+	"LL_FREE2"             : "Setup with User Name and Password",
+	"LL_PLUS0"             : "Launch Live-Reporter+",
+	"LL_PLUS1"             : "Setup Host Name, Port Number and Stream Name",
+	"LL_PLUS2"             : "Setup with User Name and Password",
+	"CREATE_CUSTOM_URL"    : "Let's Create Your Server Information",
+	"APP_TYPE"             : "Application",
+	"IP_OR_HOST_LBL"       : "IP or Hostname",
+	"PORT_NUMBER_LBL"      : "Port Number",
+	"ERROR_IN_PORT"        : "Error in port number.",
+	"STREAM_NAME_LBL"      : "Application or Stream Name",
+	"USER_NAME_LBL"        : "User Name",
+        "PASSWORD_LBL"         : "Password",
+	"CREATE_BUTTON"        : "Create Custom URL Link"
+
+}

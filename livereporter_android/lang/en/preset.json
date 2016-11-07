@@ -1,0 +1,9 @@
+{
+	"TITLE"                : "Preset",
+	"SETTING_RETURN"       : "Return to Settings View List",
+	"MSG_0"                : "<p>The address and the port number are stored as</p><p>the preset in this view.</p>",
+	"MSG_1"                : "<h4>New Preset</h4><p>The button add for the new server port and address preset.</p>",
+	"MSG_2"                : "<h4>Edit Preset</h4><p>The button edit for the exist server port and address preset.</p>",
+	"MSG_3"                : "<h4>New / Edit Preset</h4><p>New / Edit Preset are consisted as below fields.</p>",
+	"MSG_4"                : "<h5>Preset Name</h5><p>This is preset name on list table.</p><h5>Server Address</h5><p>This is network name or IP address of the broadcast server.</p><h5>Server Port Number</h5><p>This is network port number for broadcast server.</p><h5>Stream Name</h5><p>The name is identifier of stream on broadcast server.</p><p>On wowza streaming server,</p><p>the streaming name are consisted of</p><p>application name, slash symbol and streaming name</p><p>(Ex. live/streamname).</p>"
+}

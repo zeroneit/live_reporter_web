@@ -1,0 +1,11 @@
+{
+	"TITLE"                : "Video Settings",
+	"SETTING_RETURN"       : "Return to Settings View List",
+	"MSG_0"                : "<p>The video Settings view is video parameter control for </p><p>the iOS camera capture resolution,</p><p>the frame rate</p><p>and the quality of the H.264 encode.</p>",
+	"MSG_1"                : "<h4>Camera Resolution</h4><p>The iOS capture resolution is updated by this parameter.</p><p>These resolution are listed as below.</p>",
+	"MSG_2"                : "<h4>Frame Rate</h4><p>The capture frame rate is updated by this parameter.</p><p>In the low frame rate, the picture quality is updateded.</p><p>These frame rates are listed as below.</p>",
+	"MSG_3"                : "<h4>Encode Quality</h4><p>The H.264 encode parameter is updated by this parameter.</p><p>The low quality is effected the nallow band networks (etc. mobile networks).</p><p>The high quality is effected the broadband networks (etc. Wifi and Ad-Hoc networks).</p><p>These qualities are listed as below.</p><p>Lowest</p><p>Low</p><p>Middle</p><p>High</p><p>Highest</p><hr /><p>The camera resolution and the encode qualities are effected to the data bitrate on your network.</p><p>The bitrate is displayed on the top in this setting view.</p><p>The camera resolution, encode quality and the bitrate are listed as below.</p>",
+	"MSG_LOW"              : "Low",
+	"MSG_MIDDLE"           : "Middle",
+	"MSG_HIGH"             : "High"
+}

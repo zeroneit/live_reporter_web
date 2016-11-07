@@ -1,0 +1,13 @@
+{
+	"TITLE"                : "Wowza Media Server Setup",
+	"MAIN_RETURN"          : "Return to Main View",
+	"MSG_0"                : "<p>This document is Wowza Streaming Server setup for Live-Reporter.</p><h5>Enter to &ldquo;Server&rdquo; for publisher setup.</h5>",
+	"MSG_1"                : "<h5>Add to new publisher. If any publisher exist, skip to this process.</h5>",
+	"MSG_2"                : "<h5>Enter to &ldquo;Application->live->Incoming Streams&rdquo; for checking streams.</h5><p>The &ldquo;live&rdquo; is application name. This application name exist as wowza default install.</p>",
+	"MSG_3"                : "<h5>Input wowza media server information on Live-Reporter App.</h5>",
+	"MSG_4"                : "<p>In this sample, title field are input as &ldquo;live/test&rdquo;.</p><p>These &ldquo;live&rdquo; and &ldquo;test&rdquo; are application name and streaming name, respectively.</p><p>The application name should be same to the wowza media server setting.</p><p>The streaming name is able to your arbitrary definition.</p>",
+	"MSG_5"                : "<h5>Tap to &ldquo;Connect&rdquo; button.</h5><h5>And then input wowza authentication on Live-Reporter App.</h5>",
+	"MSG_6"                : "<p>These user ID and password are publisher information on wowza media server.</p>",
+	"MSG_7"                : "<h5>Check &ldquo;Incoming Streams&rdquo; on the Wowza Media Server web page.</h5>",
+	"MSG_8"                : "<p>Your arbitrary streaming name may exist on &ldquo;Incoming Streams&rdquo; list.</p>"
+}

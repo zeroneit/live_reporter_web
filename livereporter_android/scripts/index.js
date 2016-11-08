@@ -51,7 +51,6 @@ function loadLanguage(data)
 		"TITLE",
 		"TITLE_MSG",
 		"OTHER_FUNCTION",
-		"BROADCAST_SERVER",
 		"USE_CLIENT_APP",
 		"USE_CLIENT_APP_MSG0",
 		"USE_CLIENT_APP_MSG1",

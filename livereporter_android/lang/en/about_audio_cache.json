@@ -3,5 +3,5 @@
 	"TITLE_MSG"            : "<p>You will need to adjust audio cache buffer size in VLC player.</p><p>This page is 'How to change for cache buffer size in VLC player'.</p>",
 	"MSG_0000"             : "1. \"Open Media\" dialog via \"Media\"->\"Open Network Stream\".",
 	"MSG_0001"             : "2. Open all options by \"Show more options\".",
-	"MSG_0002"             : "3. My default \"Caching\" value configuration is 1000 ms. The \"Caching\" value change more than 3000 ms."
+	"MSG_0002"             : "<p>3. My default \"Caching\" value configuration is 1000 ms. </p><p>The \"Caching\" value change more than 3000 ms.</p>"
 }

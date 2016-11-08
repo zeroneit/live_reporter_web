@@ -9,24 +9,9 @@ function setupIndex(lang)
 	return;
 }
 
-function setupImage(lang)
-{
-	switch(lang){
-	case 'en':
-	default:
-		$('#vlc_network_menu').attr('src', 'img/VLCNetworkMenu_EN.png');
-		$('#vlc_network_dialog').attr('src', 'img/VLCNetworkDialog_EN.png');
-		break;
-	case 'jp':
-		break;
-	}
-	return;
-}
-
 function setupLanguage(lang)
 {
 	setupLanguageDialog();
-	setupImage(lang);
 	$.ajax({
 		type:         'get',
 		url:          'lang/' + lang + '/about_audio_cache.json',
@@ -50,7 +35,9 @@ function loadLanguage(data)
 	var	LANG_KEY = [
 		"TITLE",
 		"TITLE_MSG",
-		"MSG_0000"
+		"MSG_0000",
+		"MSG_0001",
+		"MSG_0002"
 	];
 	for(i = 0; i < LANG_KEY.length; i++){
 		$('#' + LANG_KEY[i]).html(data[LANG_KEY[i]]);

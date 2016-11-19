@@ -1,0 +1,11 @@
+{
+	"TITLE"                : "Operation Check on Android Devices",
+	"TITLE_MSG"            : "<p>Live-Reporter was carried out operation check on below devices list.</p><p>At any time, this list will be updating after the operation check or report.</p>",
+	"RETURN_MESSAGE"       : "Return",
+	"PRODUCT"              : "Product",
+	"MODEL_NAME"           : "Model",
+	"CPU_VENDOR"           : "CPU Vendor",
+	"CPU_MODEL_NAME"       : "CPU Model",
+	"OPERATION_RESULT"     : "Operation",
+	"NOTE"                 : "Note"
+}

@@ -1,0 +1,11 @@
+{
+	"TITLE"                : "動作確認済みアンドロイド端末について",
+	"TITLE_MSG"            : "<p>Live-Reporterは以下のAndroid端末での動作は確認しています。</p><p>随時、動作確認済みもしくは、動作報告後リストを更新していきます。</p>",
+	"RETURN_MESSAGE"       : "戻る",
+	"PRODUCT"              : "プロダクト",
+	"MODEL_NAME"           : "モデル",
+	"CPU_VENDOR"           : "CPUベンダー",
+	"CPU_MODEL_NAME"       : "CPUモデル",
+	"OPERATION_RESULT"     : "動作",
+	"NOTE"                 : "備考"
+}

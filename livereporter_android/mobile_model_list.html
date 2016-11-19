@@ -35,7 +35,7 @@
     <link rel="shortcut icon" href="ico/favicon.png" />
     <script type='text/javascript' src='scripts/jquery.js'></script>
     <script type='text/javascript' src='scripts/language_set.js'></script>
-    <script type='text/javascript' src='scripts/index.js'></script>
+    <script type='text/javascript' src='scripts/mobile_model_list.js'></script>
     <script type='text/javascript' src='scripts/jquery-ui.min.js'></script>
     <script type='text/javascript' src='scripts/jquery.ui.ympicker.js'></script>
   </head>
@@ -80,33 +80,19 @@
         <div id='TITLE_MSG'></div>
       </div>
       <div>
-        <a id='MOBILE_LIST_MSG' href='#' onclick='loadLocalizedHTMLPage("mobile_model_list.html")'></a>
+        <a id='RETURN_MESSAGE' href='#' onclick='loadLocalizedHTMLPage("index.html")'></a>
       </div>
-      <h4 id='USE_CLIENT_APP'></h4>
-      <p id='USE_CLIENT_APP_MSG0'></p>
-      <div style='width:280px;height:120px;'><img src='img/FromVLCRequest.png' style='width:280px;' /></div>
-      <div id='USE_CLIENT_APP_MSG1'></div>
-      <div style='width:280px;height:140px;'><img src='img/RequestAddressInMainView.png' style='width:280px;' /></div>
-      <br />
-      <div id='USE_CLIENT_APP_MSG2'></div>
-      <div style='width:280;height:260px;'>
-        <img id='vlc_network_menu' src='img/VLCNetworkMenu.png' style='width:240px;' />
-      </div>
-      <div id='USE_CLIENT_APP_MSG3'></div>
-      <div style='width:280;height:200px;'>
-        <img id='vlc_network_dialog' src='img/VLCNetworkDialog.png' style='width:280px;' />
-      </div>
-      <hr />
-      <h4 id='USE_SERVER_PUSH'>サーバーへのプッシュ伝送</h4>
-      <div id='USE_SERVER_PUSH_MSG0'></div>
-      <div style='width:280;height:320px;'>
-        <img src='img/ToServerRequest.png' style='width:280px;' />
-      </div>
-      <div id='USE_SERVER_PUSH_MSG1'></div>
-      <div style='width:280;height:180px;'>
-        <img src='img/InputServerAddressInMainView.png' style='width:280px;' />
-      </div>
-      <div id='USE_SERVER_PUSH_MSG2'></div>
+      <table id='MOBILE_MODEL_LIST' border='1'>
+        <tr>
+          <th id="PRODUCT" ></th>
+          <th id="MODEL_NAME" ></th>
+          <th id="CPU_VENDOR" ></th>
+          <th id="CPU_MODEL_NAME" ></th>
+          <th id="OPERATION_RESULT" ></th>
+          <th id="NOTE" ></th>
+        </tr>
+        <hr />
+      </table>
       <hr />
       <div class="footer">
         <p>

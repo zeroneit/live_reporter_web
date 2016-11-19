@@ -50,6 +50,7 @@ function loadLanguage(data)
 	var	LANG_KEY = [
 		"TITLE",
 		"TITLE_MSG",
+		"MOBILE_LIST_MSG",
 		"OTHER_FUNCTION",
 		"USE_CLIENT_APP",
 		"USE_CLIENT_APP_MSG0",

@@ -1,6 +1,7 @@
 {
 	"TITLE"                : "About Live-Reporter for Android",
 	"TITLE_MSG"            : "<p>Live-Reporter is camera server application on Android device.</p><p>The transmitted video and audio are played on PC or smartphone applications.</p><p>In addition, Live-Reporter can send to several media servers by announced push method.</p><p>This page is 'How to use for Live-Reporter'.</p>",
+	"MOBILE_LIST_MSG"      : "Operation Check Android Device List",
 	"USE_CLIENT_APP"       : "On demand stream by client application",
 	"USE_CLIENT_APP_MSG0"  : "<a href='http://www.videolan.org'>VLC player from Video LAN project</a> is well known for the on demand stream player.",
 	"USE_CLIENT_APP_MSG1"  : "<p>As below picture is Live-Reporter main screen. </p><p>You can check RTSP address on your Android device.</p><p>The address label can be shown for other assigned IP address by your tapped operation.</p>",

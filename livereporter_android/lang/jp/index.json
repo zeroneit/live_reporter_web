@@ -1,6 +1,7 @@
 {
-	"title"                : "LiveReporter for Androidについて",
+	"TITLE"                : "LiveReporter for Androidについて",
 	"TITLE_MSG"            : "<p>LiveReporterはAndroid上からカメラ映像を伝送するアプリケーションです。</p><p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p><p>また、オープンソースもしくは有料の配信サーバーへ向け</p><p>映像をプッシュ送信することができます。</p><p>本ページでは、基本的な使用方法の説明を記載しています。</p>",
+	"MOBILE_LIST_MSG"      : "動作確認アンドロイド端末",
 	"USE_CLIENT_APP"       : "クライアントアプリを使った伝送",
 	"USE_CLIENT_APP_MSG0"  : "クライアントアプリは代表的なものとして<a href='http://www.videolan.org'>VideoLANプロジェクトのVLCプレーヤー</a>があります。",
 	"USE_CLIENT_APP_MSG1"  : "<p>アプリ起動後、下記の画面が表示されます。</p><p>画面下部に表示されたアドレスを確認してください。</p><p>Android端末に複数のIPアドレスが与えられている場合、</p><p>表示されているアドレスをタップすることで、</p><p>他に与えられているアドレス情報を表示することができます。</p>",

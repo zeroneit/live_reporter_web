@@ -1,5 +1,5 @@
 {
-	"TITLE"                : "LiveReporter for Androidについて",
+	"TITLE"                : "Live-Reporter for Androidについて",
 	"TITLE_MSG"            : "<p>LiveReporterはAndroid上からカメラ映像を伝送するアプリケーションです。</p><p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p><p>また、オープンソースもしくは有料の配信サーバーへ向け</p><p>映像をプッシュ送信することができます。</p><p>本ページでは、基本的な使用方法の説明を記載しています。</p>",
 	"MOBILE_LIST_MSG"      : "動作確認アンドロイド端末",
 	"USE_CLIENT_APP"       : "クライアントアプリを使った伝送",

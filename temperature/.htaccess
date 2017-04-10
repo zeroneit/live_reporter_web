@@ -1,4 +1,0 @@
-AuthUserFile /home/kzkysdjpn/.htpasswd
-AuthName "Input ID and Password"
-AuthType Basic
-require valid-user

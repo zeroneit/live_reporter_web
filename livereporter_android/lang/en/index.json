@@ -1,0 +1,14 @@
+{
+	"TITLE"                : "About Live-Reporter for Android",
+	"TITLE_MSG"            : "<p>Live-Reporter is camera server application on Android device.</p><p>The transmitted video and audio are played on PC or smartphone applications.</p><p>In addition, Live-Reporter can send to several media servers by announced push method.</p><p>This page is 'How to use for Live-Reporter'.</p>",
+	"MOBILE_LIST_MSG"      : "Operation Check Android Device List",
+	"USE_CLIENT_APP"       : "On demand stream by client application",
+	"USE_CLIENT_APP_MSG0"  : "<a href='http://www.videolan.org'>VLC player from Video LAN project</a> is well known for the on demand stream player.",
+	"USE_CLIENT_APP_MSG1"  : "<p>As below picture is Live-Reporter main screen. </p><p>You can check RTSP address on your Android device.</p><p>The address label can be shown for other assigned IP address by your tapped operation.</p>",
+	"USE_CLIENT_APP_MSG2"  : "<p>Launch VLC player on your PC.</p><p>Select menu to 'File' -> 'Open Network'.</p>",
+	"USE_CLIENT_APP_MSG3"  : "<p>Open source dialog box is shown on display.</p><p>Input your Live-Reporter RTSP address. </p><p>(RTSP address is shown on Live-Reporter main screen. </p><p>You already checked on the screen.) </p><p>And then click 'Open' button.</p>",
+	"USE_SERVER_PUSH"      : "Server push from your Android device",
+	"USE_SERVER_PUSH_MSG0" : "<p>The announce push method on Live-Reporter is supported by servral servers.</p><p>Ex. <a href='http://dss.macosforge.org/'>Apple corp. DarwinStreamingServer</a>、<a href='http://www.wowza.com/'>Wowza Media Server</a>.</p>",
+	"USE_SERVER_PUSH_MSG1" : "<p>On Live-Reporter main screen, these top text fields are</p><p>prepared for your media server address information.</p><p>(IP or name address, port number, streaming name (or application name))</p><p>Live-Reporter connect to your server by the &ldquo;Connect&rdquo; button.</p><h5>About streaming name....</h5><p>On wowza streaming server,</p><p>the streaming name are consisted of</p><p>application name, slash symbol and streaming name</p><p>(Ex. live/streamname).</p>",
+	"USE_SERVER_PUSH_MSG2" : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>About Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB Interface - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Setup for Wowza Media Server</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Setup for Darwin Streaming Server</a></p>"
+}

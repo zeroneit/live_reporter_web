@@ -1,0 +1,517 @@
+diff --git Makefile.POSIX Makefile.POSIX
+index 750a333..0ccda96 100644
+--- Makefile.POSIX
++++ Makefile.POSIX
+@@ -6,7 +6,7 @@ C++ = $(CPLUS)
+ CC = $(CCOMP)
+ LINK = $(LINKER)
+ CCFLAGS += $(COMPILER_FLAGS)  -DDSS_USE_API_CALLBACKS -g -Wall -Wno-format-y2k $(INCLUDE_FLAG) PlatformHeader.h
+-LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib -lQTFileLib
++LIBS = -lCommonUtilitiesLib -lQTFileLib $(CORE_LINK_LIBS)
+ 
+ # OPTIMIZATION
+ CCFLAGS += -O3
+diff --git QTFileTools/QTFileInfo.tproj/Makefile.POSIX QTFileTools/QTFileInfo.tproj/Makefile.POSIX
+index c2f62e7..4f5c227 100644
+--- QTFileTools/QTFileInfo.tproj/Makefile.POSIX
++++ QTFileTools/QTFileInfo.tproj/Makefile.POSIX
+@@ -6,7 +6,7 @@ C++ = $(CPLUS)
+ CC = $(CCOMP)
+ LINK = $(LINKER)
+ CCFLAGS += $(COMPILER_FLAGS) $(INCLUDE_FLAG) ../../PlatformHeader.h -g -Wall
+-LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a
++LIBS = -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a $(CORE_LINK_LIBS)
+ 
+ #OPTIMIZATION
+ CCFLAGS += -O3
+diff --git QTFileTools/QTFileTest.tproj/Makefile.POSIX QTFileTools/QTFileTest.tproj/Makefile.POSIX
+index 6f3ac6b..4f7c4fe 100644
+--- QTFileTools/QTFileTest.tproj/Makefile.POSIX
++++ QTFileTools/QTFileTest.tproj/Makefile.POSIX
+@@ -6,7 +6,7 @@ C++ = $(CPLUS)
+ CC = $(CCOMP)
+ LINK = $(LINKER)
+ CCFLAGS += $(COMPILER_FLAGS) $(INCLUDE_FLAG) ../../PlatformHeader.h -g -Wall
+-LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a
++LIBS = -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a $(CORE_LINK_LIBS)
+ 
+ #OPTIMIZATION
+ CCFLAGS += -O3
+diff --git QTFileTools/QTSampleLister.tproj/Makefile.POSIX QTFileTools/QTSampleLister.tproj/Makefile.POSIX
+index 50397f8..5cddd60 100644
+--- QTFileTools/QTSampleLister.tproj/Makefile.POSIX
++++ QTFileTools/QTSampleLister.tproj/Makefile.POSIX
+@@ -6,7 +6,7 @@ C++ = $(CPLUS)
+ CC = $(CCOMP)
+ LINK = $(LINKER)
+ CCFLAGS += $(COMPILER_FLAGS) $(INCLUDE_FLAG) ../../PlatformHeader.h -g -Wall
+-LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a
++LIBS = -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a $(CORE_LINK_LIBS)
+ 
+ #OPTIMIZATION
+ CCFLAGS += -O3
+diff --git QTFileTools/QTTrackInfo.tproj/Makefile.POSIX QTFileTools/QTTrackInfo.tproj/Makefile.POSIX
+index d8bb3c2..28eef73 100644
+--- QTFileTools/QTTrackInfo.tproj/Makefile.POSIX
++++ QTFileTools/QTTrackInfo.tproj/Makefile.POSIX
+@@ -6,7 +6,7 @@ C++ = $(CPLUS)
+ CC = $(CCOMP)
+ LINK = $(LINKER)
+ CCFLAGS += $(COMPILER_FLAGS) $(INCLUDE_FLAG) ../../PlatformHeader.h -g -Wall
+-LIBS = $(CORE_LINK_LIBS) -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a
++LIBS = -lCommonUtilitiesLib  -lQTFileExternalLib ../../CommonUtilitiesLib/libCommonUtilitiesLib.a ../../QTFileLib/libQTFileExternalLib.a $(CORE_LINK_LIBS)
+ 
+ #OPTIMIZATION
+ CCFLAGS += -O3
+diff --git WebAdmin/WebAdminHtml/adminprotocol-lib.pl WebAdmin/WebAdminHtml/adminprotocol-lib.pl
+index 9375855..70d2757 100644
+--- WebAdmin/WebAdminHtml/adminprotocol-lib.pl
++++ WebAdmin/WebAdminHtml/adminprotocol-lib.pl
+@@ -557,6 +557,24 @@ sub DeleteValueFromAttribute {
+ #					data returned is the auth challenge http headers
+ # 					500 - qtss is not responding
+ #					data - must be empty
++
++sub LoadMessageHashes{
++	$messageHashRef	= ();
++	open(MESSAGES, "/var/streaming/AdminHtml/html_en/messages") or die "Couldn't find the $lang language messages file!";
++	while($messageLine = <MESSAGES>) {
++		if(($messageLine =~ /^#/) || ($messageLine =~ /^\s+$/)) {
++			next;
++		}
++		if($messageLine =~ /^(\s*?)(\S+)(\s+?)\"(.*)\"(\s*)$/) {
++			$keyword = $2;
++			$messageStr = $4;
++		}
++		$messageHashRef->{$keyword} = $messageStr;
++	}
++	close(MESSAGES);
++	return $messageHashRef;
++}
++
+ sub ParseFile {
+ 	my $authheader = $_[1];
+ 	my $server = $_[2];
+@@ -571,7 +589,8 @@ sub ParseFile {
+ 		$funcparam{$fkey} = $fvalue;
+ 	}
+ 	
+-	my $messHash = GetMessageHash();
++#	my $messHash = GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	
+ 	local (*TEMPFILE, $_);
+diff --git WebAdmin/WebAdminHtml/parse_xml.cgi WebAdmin/WebAdminHtml/parse_xml.cgi
+index d3ad29f..ff525aa 100644
+--- WebAdmin/WebAdminHtml/parse_xml.cgi
++++ WebAdmin/WebAdminHtml/parse_xml.cgi
+@@ -22,7 +22,7 @@
+ #
+ # @APPLE_LICENSE_HEADER_END@
+ #
+-
++use Data::Dumper;
+ require('tag_vals.pl');
+ require('tag_types.pl');
+ require('tag_formats.pl');
+@@ -31,7 +31,6 @@ require('cgi-lib.pl');
+ require('playlist-lib.pl');
+ require('relayxmlparser.pl');
+ require('password-utils.pl');
+-
+ # Get the server name, QTSS IP address, and Port from ENV hash
+ $servername = $ENV{"SERVER_SOFTWARE"};
+ $qtssip = $ENV{"QTSSADMINSERVER_QTSSIP"};
+@@ -41,9 +40,12 @@ $accessdir = $ENV{"LANGDIR"};
+ $nonAuthenticatedActions = ("|login|logout|AssistSetPassword|");
+ $displayedLoginMessage = 0;
+ 
++$messageRefs = LoadMessageHashes();
++
+ $auth = '';
+ $authheader = '';
+-$messageHash = &adminprotolib::GetMessageHash();
++#$messageHash = &adminprotolib::GetMessageHash();
++$messageHash = $messageRefs;
+ $cookie = '';
+ $password = '';
+ $iteration = '';
+@@ -55,6 +57,23 @@ my %endTags = ();
+ # tag depth variable
+ my $tag_depth = 0;
+ 
++sub LoadMessageHashes{
++	$messageHashRef	= ();
++	open(MESSAGES, "/var/streaming/AdminHtml/html_en/messages") or die "Couldn't find the $lang language messages file!";
++	while($messageLine = <MESSAGES>) {
++		if(($messageLine =~ /^#/) || ($messageLine =~ /^\s+$/)) {
++			next;
++		}
++		if($messageLine =~ /^(\s*?)(\S+)(\s+?)\"(.*)\"(\s*)$/) {
++			$keyword = $2;
++			$messageStr = $4;
++		}
++		$messageHashRef->{$keyword} = $messageStr;
++	}
++	close(MESSAGES);
++	return $messageHashRef;
++}
++
+ sub encodeBase64 {
+     my $res = '';
+ 
+@@ -213,7 +232,8 @@ sub foundTag {
+ 	
+ 	#if it starts with / then we'll assume it's a path to a server var
+ 	if (($_ ne '') && (/^\//) && ($iteration eq '')) {
+-		my $messHash = adminprotolib::GetMessageHash();
++#		my $messHash = adminprotolib::GetMessageHash();
++		my $messHash = $messageRefs;
+ 		$status = adminprotolib::EchoData($data, $messHash, $authheader, $qtssip, $qtssport, $value, $value);
+ 
+ 		if (($status == 500) and ($data =~ /Connection refused/) and ($displayedLoginMessage == 0)) {
+@@ -324,8 +344,9 @@ sub foundString {
+ 		$name =~ s/ *name="*//;
+ 		$name =~ s/"//;
+ 	}
+-	my $messHash = adminprotolib::GetMessageHash();
+-	my %messages = %$messHash;
++#	my $messageHash = adminprotolib::GetMessageHash();
++	my $messageHash	= $messageRefs;
++	my %messages = %$messageHash;
+ 	my $QTName = 'QT' . $name;
+ 	if (($^O eq "darwin") and ($messages{$QTName} ne '')) {
+ 		return $messages{$QTName};
+@@ -345,7 +366,8 @@ sub parseTags {
+ }
+ 
+ sub StartStopServer {
+-	my $messageHash = &adminprotolib::GetMessageHash();
++#	my $messageHash = &adminprotolib::GetMessageHash();
++	my $messageHash	= $messageRefs;
+ 	my $data = "";
+ 	my $status = &adminprotolib::EchoData($data, $messageHash, $authheader, $qtssip, $qtssport, "/modules/admin/server/qtssSvrState", "/server/qtssSvrState");
+ 	# if the server is not running, launch process
+@@ -361,7 +383,8 @@ sub StartStopServer {
+ }
+ 
+ sub SaveGeneralSettings {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $settingsPath = '/admin/server/qtssSvrPreferences/';
+ 	my $data = '';
+@@ -462,7 +485,8 @@ sub SaveGeneralSettings {
+ }
+ 
+ sub RunAssistant {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $settingsPath = '/admin/server/qtssSvrPreferences/';
+ 	my $MP3BroadcastPasswordPath = "/admin/server/qtssSvrModuleObjects/QTSSMP3StreamingModule/qtssModPrefs/mp3_broadcast_password";
+@@ -550,7 +574,8 @@ sub RunAssistant {
+ }
+ 
+ sub SavePortSettings {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $data = '';
+ 	my $settingsPath = '/admin/server/qtssSvrPreferences/';
+@@ -590,7 +615,8 @@ sub SavePortSettings {
+ }
+ 
+ sub SaveLogSettings {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $errorPath = "/admin/server/qtssSvrPreferences/";
+ 	my $accessPath = "/admin/server/qtssSvrModuleObjects/QTSSAccessLogModule/qtssModPrefs/";
+@@ -636,7 +662,8 @@ sub SaveLogSettings {
+ }
+ 
+ sub ChangePassword {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $usersFileAttributePath = "/server/qtssSvrModuleObjects/QTSSAccessModule/qtssModPrefs/modAccess_usersfilepath";
+ 	my $groupsFileAttributePath = "/server/qtssSvrModuleObjects/QTSSAccessModule/qtssModPrefs/modAccess_groupsfilepath";
+@@ -754,7 +781,8 @@ sub ChangePassword {
+ }
+ 
+ sub ChangeBroadcastPassword {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $filedelim = &playlistlib::GetFileDelimChar();
+ 	my $moviesFolderPath;
+@@ -808,7 +836,8 @@ sub ChangeBroadcastPassword {
+ }
+ 
+ sub ChangeMP3Password {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $MP3BroadcastPasswordPath = "/admin/server/qtssSvrModuleObjects/QTSSMP3StreamingModule/qtssModPrefs/mp3_broadcast_password";
+ 	my $qtssPasswdName = $ENV{"QTSSADMINSERVER_QTSSQTPASSWD"};
+@@ -835,7 +864,8 @@ sub ChangeMP3Password {
+ # returns	0 => failure
+ #			1 => success
+ sub AssistSetPassword {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $usersFileAttributePath = "/server/qtssSvrModuleObjects/QTSSAccessModule/qtssModPrefs/modAccess_usersfilepath";
+ 	my $groupsFileAttributePath = "/server/qtssSvrModuleObjects/QTSSAccessModule/qtssModPrefs/modAccess_groupsfilepath";
+@@ -986,7 +1016,8 @@ sub AssistSetPassword {
+ }
+ 
+ sub StartPlaylist {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $curplaylist = $query->{'curplaylist'};
+ 	my $isRunning = &playlistlib::GetPlayListState($curplaylist);
+@@ -1059,7 +1090,8 @@ sub StartPlaylist {
+ 
+ sub StopPlaylist
+ {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+     my $plroot = &playlistlib::GetPLRootDir();
+     my $filedelim = &playlistlib::GetFileDelimChar();
+@@ -1100,7 +1132,8 @@ sub ShowPlaylistLog {
+ }
+ 
+ sub PLOpenDir {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $genreArrayRef = adminprotolib::GetGenreArray();
+ 	$curplaylist = $query->{'curplaylist'};
+@@ -1108,7 +1141,8 @@ sub PLOpenDir {
+ }
+ 
+ sub GetPlaylist {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $genreArrayRef = adminprotolib::GetGenreArray();
+ 	$curplaylist = $query->{'curplaylist'};
+@@ -1152,7 +1186,8 @@ sub GetPlaylist {
+ }
+ 
+ sub CreatePlaylist {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+     my $plroot = &playlistlib::GetPLRootDir();
+ 	my $fileDelimChar = &playlistlib::GetFileDelimChar();
+@@ -1224,7 +1259,8 @@ sub CreatePlaylist {
+ # NewPlaylist expects the var isMP3 to be set to 0 or 1
+ 
+ sub NewPlaylist {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $genreArrayRef = &adminprotolib::GetGenreArray();
+ 	my @genreArray = @$genreArrayRef;
+@@ -1260,7 +1296,8 @@ sub NewPlaylist {
+ }
+ 
+ sub RefreshPlaylistDir() {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $genreArrayRef = &adminprotolib::GetGenreArray();
+ 	my @genreArray = @$genreArrayRef;
+@@ -1313,7 +1350,8 @@ sub RefreshPlaylistDir() {
+ }
+ 
+ sub DeletePlaylist {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	if (&playlistlib::RemovePlaylistDir($query->{'curplaylist'}) == 1) {
+ 		$confirmText = $messages{'PLDeleteText'};
+@@ -1328,7 +1366,8 @@ sub DeletePlaylist {
+ 
+ sub ResetErrorLog {
+ 	my $chdelim = &playlistlib::GetFileDelimChar();
+-	my $messHash = adminprotolib::GetMessageHash();	
++#	my $messHash = adminprotolib::GetMessageHash();	
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	my $responseText = '';
+ 	my $status = adminprotolib::GetData($responseText, $messHash, $authheader, $qtssip, $qtssport, '/modules/admin/server/qtssSvrPreferences/error_logfile_dir');
+@@ -1459,7 +1498,8 @@ sub RestartBroadcaster {
+ 
+ # this routine performs an action, if there is any
+ sub PerformAction {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = $messageRefs;
+ 	my %messages = %$messHash;
+ 	if ($theAction eq 'refreshmessages') {
+ 		# refresh the message hashes from the correct files.
+diff --git WebAdmin/WebAdminHtml/tag_formats.pl WebAdmin/WebAdminHtml/tag_formats.pl
+index d3c8b90..7421993 100644
+--- WebAdmin/WebAdminHtml/tag_formats.pl
++++ WebAdmin/WebAdminHtml/tag_formats.pl
+@@ -45,12 +45,30 @@ sub GetMessageHash
+ 	return $ENV{"QTSSADMINSERVER_EN_MESSAGEHASH"};  
+ }
+ 
++sub LoadMessageHashes{
++	$messageHashRef	= ();
++	open(MESSAGES, "/var/streaming/AdminHtml/html_en/messages") or die "Couldn't find the $lang language messages file!";
++	while($messageLine = <MESSAGES>) {
++		if(($messageLine =~ /^#/) || ($messageLine =~ /^\s+$/)) {
++			next;
++		}
++		if($messageLine =~ /^(\s*?)(\S+)(\s+?)\"(.*)\"(\s*)$/) {
++			$keyword = $2;
++			$messageStr = $4;
++		}
++		$messageHashRef->{$keyword} = $messageStr;
++	}
++	close(MESSAGES);
++	return $messageHashRef;
++}
++
+ sub runFormatter {
+ 	my $theString = $_[0];
+ 	my $theFormatter = $_[1];
+ 	my $theUserParam = $_[2];
+ 	my $theName = $_[3];
+-	my $messHash = GetMessageHash();
++#	my $messHash = GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	
+ 	if ($theFormatter eq "localtime") {
+diff --git WebAdmin/WebAdminHtml/tag_vals.pl WebAdmin/WebAdminHtml/tag_vals.pl
+index a2717c4..8f70187 100644
+--- WebAdmin/WebAdminHtml/tag_vals.pl
++++ WebAdmin/WebAdminHtml/tag_vals.pl
+@@ -161,12 +161,30 @@
+ 
+ @returnedKeys = ();
+ 
++sub LoadMessageHashes{
++	$messageHashRef	= ();
++	open(MESSAGES, "/var/streaming/AdminHtml/html_en/messages") or die "Couldn't find the $lang language messages file!";
++	while($messageLine = <MESSAGES>) {
++		if(($messageLine =~ /^#/) || ($messageLine =~ /^\s+$/)) {
++			next;
++		}
++		if($messageLine =~ /^(\s*?)(\S+)(\s+?)\"(.*)\"(\s*)$/) {
++			$keyword = $2;
++			$messageStr = $4;
++		}
++		$messageHashRef->{$keyword} = $messageStr;
++	}
++	close(MESSAGES);
++	return $messageHashRef;
++}
++
+ # edit this to include provisions for additional repeater arrays
+ # should return an array with the names of all of the arrays generated by this function
+ # any arrays generated by this function should start with 'repeater' so that there's no conflicts
+ sub getRepeaterArray {
+ 	my $arrayName = $_[0];
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 		
+ 	if ($arrayName eq 'connectedUsers') {
+@@ -811,7 +829,8 @@ sub getQueryOrCookie {
+ 
+ sub parseErrorLog {
+ 	my $chdelim = &playlistlib::GetFileDelimChar();
+-	my $messHash = adminprotolib::GetMessageHash();	
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my $returnText = '';
+ 	my $status = adminprotolib::GetData($responseText, $messHash, $authheader, $qtssip, $qtssport, '/modules/admin/server/qtssSvrPreferences/error_logfile_dir');
+ 	$_ = $responseText;
+@@ -883,7 +902,8 @@ sub parseForAutostart {
+ }
+ 
+ sub isStreamingOnPort80 {
+-	my $messHash = adminprotolib::GetMessageHash();	
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my $status = adminprotolib::GetData($responseText, $messHash, $authheader, $qtssip, $qtssport, '/modules/admin/server/qtssSvrPreferences/rtsp_port/*');
+ 	if ($responseText =~ /[0-9]="80"/) {
+ 		return "true";
+@@ -894,7 +914,8 @@ sub isStreamingOnPort80 {
+ }
+ 
+ sub getNotBoundPort80Msg {
+-	my $messHash = adminprotolib::GetMessageHash();	
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	my $status = adminprotolib::GetData($responseText, $messHash, $authheader, $qtssip, $qtssport, '/modules/admin/server/qtssSvrRTSPPorts/*');
+ 	if ($responseText =~ /[0-9]="80"/) {
+@@ -920,7 +941,8 @@ sub getDefaultStreamingPort {
+ }
+ 
+ sub getDefaultRelayStatus {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	my $status = adminprotolib::EchoData($relayConfigDir, $messHash, $authheader, $qtssip, $qtssport, "/modules/admin/server/qtssSvrModuleObjects/QTSSRelayModule/qtssModPrefs/relay_prefs_file", "/modules/admin/server/qtssSvrModuleObjects/QTSSRelayModule/qtssModPrefs/relay_prefs_file");
+ 	my $relayarrayref = getArraysFromFile($relayConfigDir);
+@@ -997,7 +1019,8 @@ sub GetHelpURL
+ # Returns 0 if the MP3 braodcast password is blank, or 1 if it isn't.
+ sub BroadcastPasswordIsSet
+ {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	my $mp3BroadcastPassword = '';
+ 	$status = adminprotolib::EchoData($mp3BroadcastPassword, $messHash, $authheader, $qtssip, $qtssport, "/modules/admin/server/qtssSvrModuleObjects/QTSSMP3StreamingModule/qtssModPrefs/mp3_broadcast_password", "/modules/admin/server/qtssSvrModuleObjects/QTSSMP3StreamingModule/qtssModPrefs/mp3_broadcast_password");
+@@ -1042,7 +1065,8 @@ sub GetCurrentAdminUsername
+ # Returns the current broadcast username, or an empty string if there is none.
+ sub GetCurrentBroadcastUsername
+ {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	my $filedelim = &playlistlib::GetFileDelimChar();
+ 	my $moviesFolderPath;
+@@ -1067,7 +1091,8 @@ sub GetCurrentBroadcastUsername
+ # Returns 1 if the qtaccess file allows any user to write.
+ sub GetUnrestrictedBroadcastValue
+ {
+-	my $messHash = adminprotolib::GetMessageHash();
++#	my $messHash = adminprotolib::GetMessageHash();
++	my $messHash = LoadMessageHashes();
+ 	my %messages = %$messHash;
+ 	my $filedelim = &playlistlib::GetFileDelimChar();
+ 	my $moviesFolderPath;

@@ -1,0 +1,20 @@
+{
+	"MOBILE_MODEL_LIST"        : [
+		{
+			"PRODUCT"          : "HUAWEI",
+			"MODEL_NAME"       : "Y6 SCL-L02",
+			"CPU_VENDOR"       : "Qualcomm",
+			"CPU_MODEL_NAME"   : "MSM8909 Snapdragon 210 1.1 GHz",
+			"OPERATION_RESULT" : true,
+			"NOTE"             : ""
+		},
+		{
+			"PRODUCT"          : "NEC",
+			"MODEL_NAME"       : "LAVIE Tab E PC-TE508BAW",
+			"CPU_VENDOR"       : "MediaTek",
+			"CPU_MODEL_NAME"   : "MT8161/1.3 GHz",
+			"OPERATION_RESULT" : true,
+			"NOTE"             : ""
+		}
+	]
+}

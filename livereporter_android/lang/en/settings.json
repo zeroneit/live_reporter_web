@@ -1,0 +1,11 @@
+{
+	"TITLE"                : "Version, Torch LED, Parameter Settings",
+	"VIDEO_SETTINGS"       : "Video Settings",
+	"AUDIO_SETTINGS"       : "Audio Settings",
+	"NETWORK_SETTINGS"     : "Network Settings",
+	"PRESET_LIST"          : "Preset Settings",
+	"SUPERIMPOSE"          : "Superimpose Settings",
+	"MSG_0"                : "<p>The right bottom bottns are</p><p>version information, support link,</p><p>LED torch and parameter setting.</p>",
+	"MSG_1"                : "<p>The parameter setting consists some views</p><p>and these views are explained in below links.</p>",
+	"MAINVIEW_RETURN"      : "Return Main View Display"
+}

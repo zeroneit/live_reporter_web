@@ -1,0 +1,12 @@
+{
+	"TITLE"                : "Darwin Streaming Server Setup",
+	"MAIN_RETURN"          : "Return to Main View",
+	"MSG_0"                : "<p>This document is Darwin Streaming Server setup for Live-Reporter.</p><h5>Enter to &ldquo;General Settings&rdquo; for &ldquo;Broadcast Username/Password&rdquo;.</h5>",
+	"MSG_1"                : "<h5>Input your arbitrary &ldquo;New User Name&rdquo; and &ldquo;New Password&rdquo;.</h5><h5>On Live-Reporter, these input values will be requested</h5><h5>for broadcast authentication.</h5>",
+	"MSG_2"                : "<h5>Input Darwin Streaming Server information on Live-Reporter App.</h5>",
+	"MSG_3"                : "<p>In this sample, title field are input as &ldquo;test.sdp&rdquo;.</p><p>&ldquo;test.sdp&rdquo; is streaming name.</p><p>The streaming name is able to your arbitrary definition.</p>",
+	"MSG_4"                : "<h5>Tap to &ldquo;Connect&rdquo; button.</h5><h5>And then input Darwin Streaming Server authentication on</h5><h5>Live-Reporter App.</h5>",
+	"MSG_5"                : "<p>These user ID and password are &ldquo;Broadcast Username/Password&rdquo; on</p><p>Darwin Streaming Server.</p>",
+	"MSG_6"                : "<h5>Check &ldquo;/usr/local/movies&rdquo; of the file system on the server.</h5>",
+	"MSG_7"                : "<p>Your arbitrary streaming name file may exist as &ldquo;test.sdp&rdquo;.</p>"
+}

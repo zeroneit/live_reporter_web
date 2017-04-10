@@ -1,0 +1,21 @@
+.footer{
+	color:#FFFFFF;
+	text-align:center;
+	border:solid 1px #000000;
+	border-width:1px;
+	position: fixed !important;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color:#333;
+	height: 25px;
+}
+
+.sns_link{
+	float:left;
+}
+
+.sns_icons{
+	margin-left:30px;
+}

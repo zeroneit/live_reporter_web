@@ -1,0 +1,9 @@
+{
+	"TITLE"                : "About Live-Reporter+",
+	"MAINVIEW_RETURN"      : "Return to Main View",
+	"MSG_0"                : "<p>Live-Reporter+ is upgraded for these below functions.</p><p>1. Removed iAd banner.</p><p>2. Battery loss is improved by blank screen mode.</p><p>3. Max client number is from 2 to 8.</p><p>4. Web interface is implemented.</p>",
+	"MSG_1"                : "<h4>Main View</h4><p>The iAd is removed from main view.</p><p>Administrator web interface address is shown in there.</p><p>The max client number is changed from 2 to 8.</p>",
+	"MSG_2"                : "<h4>&ldquo;Blank Screen on Idling&rdquo; in Video Settings View</h4><p>At zero client connection,</p><p>these video and audio capture are held up by this switch. </p>",
+	"MSG_3"                : "<h4>&ldquo;Administration Web Interface&rdquo; in Network Settings View</h4><p>The web interface parameters are updated by this function.</p><p>The web interface setting view is shown by the &ldquo;Open Web Interface Setting&rdquo;.</p>",
+	"MSG_4"                : "<h4>Web Interface Setting</h4><p>&ldquo;Port Number&rdquo; is web interface port number.</p><p>The port number dose not conflict RTSP port number.</p><p>&ldquo;User Name&rdquo; and &ldquo;Password&rdquo; are authentication for web interface access.</p><p>At the default, &ldquo;User Name&rdquo; and &ldquo;Password&rdquo; are</p><p>&ldquo;root&rdquo; and &ldquo;admin&rdquo;, respectively.</p>"
+}

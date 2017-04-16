@@ -1,11 +1,11 @@
 {
-	"TITLE"                : "動作確認済みアンドロイド端末について",
-	"TITLE_MSG"            : "<p>Live-Reporterは以下のAndroid端末での動作は確認しています。</p><p>随時、動作確認済みもしくは、動作報告後リストを更新していきます。</p>",
-	"RETURN_MESSAGE"       : "戻る",
-	"PRODUCT"              : "プロダクト",
-	"MODEL_NAME"           : "モデル",
-	"CPU_VENDOR"           : "CPUベンダー",
-	"CPU_MODEL_NAME"       : "CPUモデル",
-	"OPERATION_RESULT"     : "動作",
-	"NOTE"                 : "備考"
+	"TITLE"                : "작동확인된 안드로이드 단말기에 대해",
+	"TITLE_MSG"            : "<p>Live-Reporter은 이하의 단말기에서 작동을 확인 하였습니다.</p><p>수시로、작동확인된 또는, 작동보고 후 목록을 업데이트하고 있습니다.</p>",
+	"RETURN_MESSAGE"       : "복귀",
+	"PRODUCT"              : "제품",
+	"MODEL_NAME"           : "모델",
+	"CPU_VENDOR"           : "CPU 벤더",
+	"CPU_MODEL_NAME"       : "CPU 모델",
+	"OPERATION_RESULT"     : "작동",
+	"NOTE"                 : "비고"
 }

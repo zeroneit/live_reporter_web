@@ -1,15 +1,15 @@
 {
-	"title"                : "LiveReporterについて",
-	"TITLE_MSG"            : "<p>LiveReporterはiOS上からカメラ映像を伝送するアプリケーションです。</p><p>伝送する映像を確認するには、PC/スマートフォンアプリを使って受信します。</p><p>また、オープンソースもしくは有料の配信サーバーへ向け</p><p>映像をプッシュ送信することができます。</p><p>本ページでは、基本的な使用方法の説明を記載しています。</p>",
-	"OTHER_FUNCTION"       : "その他の機能について",
-	"BROADCAST_SERVER"     : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>Live-Reporter+について</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB画面 - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Wowza Media Serverをセットアップする</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Darwin Streaming Serverをセットアップする</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"custom_scheme.html\")'>カスタムURL機能</a></p>",
-	"USE_CLIENT_APP"       : "クライアントアプリを使った伝送",
-	"USE_CLIENT_APP_MSG0"  : "クライアントアプリは代表的なものとして<a href='http://www.videolan.org'>VideoLANプロジェクトのVLCプレーヤー</a>があります。",
-	"USE_CLIENT_APP_MSG1"  : "<p>アプリ起動後、下記の画面が表示されます。</p><p>画面下部に表示されたアドレスを確認してください。</p><p>iPhone/iPodTouchに複数のIPアドレスが与えられている場合、</p><p>表示されているアドレスをタップすることで、</p><p>他に与えられているアドレス情報を表示することができます。</p>",
-	"USE_CLIENT_APP_MSG2"  : "<p>PCにてVLCプレイヤーを起動します。</p><p>「ファイル」->「ネットワークを開く」を選択します。</p>",
-	"USE_CLIENT_APP_MSG3"  : "<p>「ソースを開く」のダイアログが表示されます。</p><p>「URL」の欄に先ほどアプリにて表示されたアドレスを入力し、</p><p>「開く」ボタンを押します。</p>",
-	"USE_SERVER_PUSH"      : "サーバーへのプッシュ伝送",
-	"USE_SERVER_PUSH_MSG0" : "<p>本アプリが対応するプッシュ伝送できる配信サーバーは、</p><p><a href='http://dss.macosforge.org/'>Apple製DarwinStreamingServer</a>、</p><p><a href='http://www.wowza.com/'>Wowza Media Server</a></p><p>などがあげられます。</p>",
-	"USE_SERVER_PUSH_MSG1" : "<p>アプリ起動画面にて、上部に表示されたアドレス入力欄にサーバーアドレスを入力し、</p><p>接続ボタンを押してください。</p>",
-	"USE_SERVER_PUSH_MSG2" : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>Live-Reporter+について</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB画面 - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Wowza Media Serverをセットアップする</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Darwin Streaming Serverをセットアップする</a></p>"
+	"title"                : "LiveReporter에 대해",
+	"TITLE_MSG"            : "<p>LiveReporter은 IOS상에서 카메라 영상을 전송하는 어플리케이션입니다.</p><p>전송하는 영상을 확인하려면, PC/스마트폰 어플을 사용해 수신합니다.</p><p>또는, 오픈 소스 또는 유료 전송 서버를 향해 </ p> <p> 영상을 푸시 전송하는 것이 가능합니다. </ p> <p> 본 페이지에서는 기본적인 사용 방법에 대한 설명을 기재하고 있습니다. </ p> ",
+	"OTHER_FUNCTION"       : "기타 기능에 대해",
+	"BROADCAST_SERVER"     : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>Live-Reporter+에 대해</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB화면 - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Wowza Media Server를 셋엎한다.</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Darwin Streaming Server를 셋엎한다.</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"custom_scheme.html\")'>사용자URL기능</a></p>",
+	"USE_CLIENT_APP"       : "클라이언트 어플을 사용한 전송",
+	"USE_CLIENT_APP_MSG0"  : "클라이언트 어플은 대표적인 것으로<a href='http://www.videolan.org'>VideoLAN프로젝트VLC플레이어</a>가 있습니다.",
+	"USE_CLIENT_APP_MSG1"  : "<p>어플 기동후, 하기의 화면이 표시됩니다.</p><p>화면 하단에 표시되는 주소를 확인해 주세요.</p><p>iPhone/iPodTouch에 복수의IP주소가 부여된 경우,</p><p>표시되고있는 주소버튼을 눌러</p><p>기타 다른 주어진 주소 정보를 표시할 수 있다.</p>",
+	"USE_CLIENT_APP_MSG2"  : "<p>PC에서VLC플레이어를 시작합니다.</p><p>「파일」->「네트워크 열기」를 선택합니다.</p>",
+	"USE_CLIENT_APP_MSG3"  : "<p>「소스 열기」다이얼로그가 표시됩니다.</p><p>「URL」의 란에 앞서 어플리케이션에서 표시된 주소을 입력하고,</p><p>「열기」버튼을 누른다.</p>",
+	"USE_SERVER_PUSH"      : "서버로 푸시전송",
+	"USE_SERVER_PUSH_MSG0" : "<p>본 어플리케이션에 대응하는 푸시전송 가능한 수신서버은,</p><p><a href='http://dss.macosforge.org/'>Apple제DarwinStreamingServer</a>、</p><p><a href='http://www.wowza.com/'>Wowza Media Server</a></p><p>등을 들 수 있습니다.</p>",
+	"USE_SERVER_PUSH_MSG1" : "<p> 시작화면에, 상단에 표시되는 주소 입력란에 서버 주소를 입력해,</p><p>접속버튼을 눌러주세요.</p>",
+	"USE_SERVER_PUSH_MSG2" : "<p><a href='#' onclick='loadLocalizedHTMLPage(\"about_plus.html\")'>Live-Reporter+내용</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"plus_web.html\")'>WEB화면 - Live-Reporter+</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"wowza.html\")'>Wowza Media Server를 셋엎한다</a></p><p><a href='#' onclick='loadLocalizedHTMLPage(\"dss.html\")'>Darwin Streaming Server를 셋엎합니다.</a></p>"
 }

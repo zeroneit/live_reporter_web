@@ -1,13 +1,13 @@
 {
-	"TITLE"                : "Wowza Media Server 設定について",
-	"MAIN_RETURN"          : "メイン画面にもどる",
-	"MSG_0"                : "<p>Wowza Media ServerとLive-Reporterの設定方法について説明します。</p><h5>Wowza側の&ldquo;Server&rdquo;設定画面を開きます。</h5>",
-	"MSG_1"                : "<h5>新規パブリッシャーを作成します。</h5><h5>既に、使用するパブリッシャーが存在する場合は、</h5><h5>このステップは飛ばしてください。</h5>",
-	"MSG_2"                : "<h5>&ldquo;Application->live->Incoming Streams&rdquo;画面を開き、</h5><h5>配信中のストリームを確認します。</h5><p>&ldquo;live&rdquo; と表示されているのは、Wowza Media Serverにて</p><p>初期値にて作成されたアプリケーション名です。</p>",
-	"MSG_3"                : "<h5>Live-Reporter側でのWowza Media Serverの情報を入力します。</h5>",
-	"MSG_4"                : "<p>ここでは、タイトル名のフィールドに &ldquo;live/test&rdquo; と入力しています。</p><p>&ldquo;live&rdquo; と &ldquo;test&rdquo; は、それぞれアプリケーション名とストリーム名となっています。</p><p>アプリケーション名については、Wowza側にて<p></p>設定されているものと同一にしなければなりません。</p><p>ストリーム名については、任意の名前を設定します。</p>",
-	"MSG_5"                : "<h5>接続ボタンをタップし、認証情報を入力します。</h5>",
-	"MSG_6"                : "<p>ここでのユーザーIDとパスワードは</p><p>Wowza側で設定したパブリッシャー情報になります。</p>",
-	"MSG_7"                : "<h5>Wowza側の&ldquo;Incoming Streams&rdquo; 画面を確認します。</h5>",
-	"MSG_8"                : "<p>先ほど任意に設定したストリーム名称が</p><p>&ldquo;Incoming Streams&rdquo; リスト画面に表示されていれば成功です。</p>"
+	"TITLE"                : "Wowza Media Server 설정에 대해",
+	"MAIN_RETURN"          : "메인화면으로 복귀",
+	"MSG_0"                : "<p>Wowza Media ServerとLive-Reporter의 설정방법에 대해 설명합니다.</p><h5>Wowza측의&ldquo;Server&rdquo;설정화면을 엽니다</h5>",
+	"MSG_1"                : "<h5>신규 게시자를 작성합니다.</h5><h5>이미, 사용한 게시자가 존재하는 경우는,</h5><h5>이 단계는 건너 뜁니다.</h5>",
+	"MSG_2"                : "<h5>&ldquo;Application->live->Incoming Streams&rdquo;화면을 열기,</h5><h5>전송중인 스트림을 확인합니다.</h5><p>&ldquo;live&rdquo;도 표시되어 있으면,Wowza Media Server에서</p><p>초기값에서 작성된 어플리케이션명입니다.</p>",
+	"MSG_3"                : "<h5>Live-Reporter측에Wowza Media Serverの정보를 입력합니다.</h5>",
+	"MSG_4"                : "<p>여기에는, 제목명의 필드에 &ldquo;live/test&rdquo; 도 입력합니다.</p><p>&ldquo;live&rdquo; 과 &ldquo;test&rdquo; 은, 각각 어플리케이션명과 스트림명등이 있습니다.</p><p>어플리케이션명에 대해서는,Wowza측에서<p></p>설정되어 있는것과 동일하게 해야한다.</p><p>스트림명에대해서는, 임의의 이름을 설정합니다.</p>",
+	"MSG_5"                : "<h5>접속버튼을 눌러, 인증정보을 입력합니다.</h5>",
+	"MSG_6"                : "<p>여기에 사용자ID와 비밀번호은</p><p>Wowza측에 설정된 게시자 정보가 됩니다.</p>",
+	"MSG_7"                : "<h5>Wowza측의&ldquo;Incoming Streams&rdquo; 화면을 확인합니다.</h5>",
+	"MSG_8"                : "<p>방금전 임의로 설정한 스트림명칭이</p><p>&ldquo;Incoming Streams&rdquo; 리스트 화면에 표시되면 성공입니다.</p>"
 }

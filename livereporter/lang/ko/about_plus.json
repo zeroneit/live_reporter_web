@@ -5,5 +5,5 @@
 	"MSG_1"                : "<h4> 메인 화면 </ h4> <p> 메인 화면에서 iAd를 제거하고, WEB 인터페이스 관리 화면 주소를 표시합니다 </ p> <p> 최대 연결 클라이언트 수가 8로 되어 있습니다. </ p> ",
 	"MSG_2"                : "<h4> 영상 설정 화면 - &ldquo; 미작동시 화면 숨기기 &rdquo; </ h4> <p> 접속 클라이언트 수 0이면 영상과 음성 캡처를 중지합니다. </ p> ",
 	"MSG_3"                : "<h4> 네트워크 설정 화면 - &ldquo; 관리자 웹 화면 &rdquo; </ h4> <p> 웹 화면에 대한 설정은 여기에서 변경할 수 있습니다. </ p> <p> &ldquo; 웹 화면 설정을 열기 &rdquo;를 누르고 설정 화면을 엽니다. </ p> ",
-	"MSG_4"                : "<h4> 관리자 웹 화면 설정 </ h4> <p> WEB 화면은 &ldquo;포트 번호&rdquo;에 설명 된 값으로 대기합니다. </ p> <p> RTSP 대기 수신 포트 번호와 중복하지 않도록 설정합니다. </ p> <p> &ldquo; 사용자 명&rdquo; 와 &ldquo;비밀&rdquo; 웹 인터페이스에 액세스 할 때 사용되는 인증 정보입니다 </ p> <p> 초기값은 &ldquo;사용자 명&rdquo;는 &ldquo; root &rdquo; 와 &ldquo; Password &rdquo;는 &ldquo; admin &rdquo;으로 설정합니다. </ p > "
+	"MSG_4"                : "<h4> 관리자 웹 화면 설정 </ h4> <p> WEB 화면은 &ldquo;포트 번호&rdquo;에 설명 된 값으로 대기합니다. </ p> <p> RTSP 대기 수신 포트 번호와 중복하지 않도록 설정합니다. </ p> <p> &ldquo; 사용자 명&rdquo; 와 &ldquo;비밀&rdquo; 웹 인터페이스에 액세스 할 때 사용되는 인증 정보입니다 </ p> <p> 초기값은 &ldquo;사용자 명&rdquo;는 &ldquo; root &rdquo; 와 &ldquo; Password &rdquo;는 &ldquo; admin &rdquo;으로 설정합니다. </ p > "
 }
